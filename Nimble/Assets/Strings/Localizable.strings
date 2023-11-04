@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Nimble
+
+  Created by javier pineda on 04/11/23.
+  
+*/
+
+"email"     = "Email";
+"password"  = "Password";
+"forgot"    = "Forgot?";
+"login"     = "Log in";
