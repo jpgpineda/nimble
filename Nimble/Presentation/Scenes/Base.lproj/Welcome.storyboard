@@ -8,15 +8,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Nimble" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="Nimble" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hiking" translatesAutoresizingMaskIntoConstraints="NO" id="zhE-I4-Dti">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c24-2o-wob">
+                                <rect key="frame" x="24" y="167" width="345" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localized" value="welcomeToGBM"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85A-Ja-1hc">
+                                <rect key="frame" x="24" y="741" width="345" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="7Fo-QV-7jM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zhE-I4-Dti" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0cf-zR-hrj"/>
+                            <constraint firstItem="zhE-I4-Dti" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4VH-dd-bBG"/>
+                            <constraint firstItem="85A-Ja-1hc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="DqO-Ma-kng"/>
+                            <constraint firstItem="zhE-I4-Dti" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="F0j-vL-L1o"/>
+                            <constraint firstItem="c24-2o-wob" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="REM-Hx-PgC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="85A-Ja-1hc" secondAttribute="bottom" constant="32" id="RZE-i8-YEz"/>
+                            <constraint firstItem="c24-2o-wob" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="RdC-nL-u63"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c24-2o-wob" secondAttribute="trailing" constant="24" id="ek0-Si-9az"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="85A-Ja-1hc" secondAttribute="trailing" constant="24" id="jci-kO-DSf"/>
+                            <constraint firstAttribute="bottom" secondItem="zhE-I4-Dti" secondAttribute="bottom" id="sOA-2l-hQG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OZy-rh-OGB"/>
                 </viewController>
@@ -44,6 +78,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="hiking" width="612" height="792"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

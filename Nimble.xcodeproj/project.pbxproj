@@ -18,6 +18,10 @@
 		08EB73AC2AF6C72000E3FB05 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08EB73AB2AF6C72000E3FB05 /* Localizable.strings */; };
 		08EB73AE2AF6C73200E3FB05 /* StringLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73AD2AF6C73200E3FB05 /* StringLocalized.swift */; };
 		08EB73B22AF6C98000E3FB05 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73B12AF6C98000E3FB05 /* WelcomeViewController.swift */; };
+		08EB73B52AF6D3DC00E3FB05 /* NimbleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73B42AF6D3DC00E3FB05 /* NimbleButton.swift */; };
+		08EB73B72AF6D42600E3FB05 /* UIVIew+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73B62AF6D42600E3FB05 /* UIVIew+Ext.swift */; };
+		08EB73B92AF6D47000E3FB05 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73B82AF6D47000E3FB05 /* CGFloat+Ext.swift */; };
+		08EB73BB2AF6D4E200E3FB05 /* NimbleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73BA2AF6D4E200E3FB05 /* NimbleTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		08EB73AB2AF6C72000E3FB05 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		08EB73AD2AF6C73200E3FB05 /* StringLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLocalized.swift; sourceTree = "<group>"; };
 		08EB73B12AF6C98000E3FB05 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		08EB73B42AF6D3DC00E3FB05 /* NimbleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleButton.swift; sourceTree = "<group>"; };
+		08EB73B62AF6D42600E3FB05 /* UIVIew+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Ext.swift"; sourceTree = "<group>"; };
+		08EB73B82AF6D47000E3FB05 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
+		08EB73BA2AF6D4E200E3FB05 /* NimbleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +165,7 @@
 		08EB73A62AF6C62E00E3FB05 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				08EB73B32AF6D3AF00E3FB05 /* Components */,
 				08EB737C2AF6C5FB00E3FB05 /* LaunchScreen.storyboard */,
 				08EB73A72AF6C63D00E3FB05 /* Scenes */,
 			);
@@ -209,8 +218,19 @@
 		08EB73B02AF6C94400E3FB05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				08EB73B62AF6D42600E3FB05 /* UIVIew+Ext.swift */,
+				08EB73B82AF6D47000E3FB05 /* CGFloat+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		08EB73B32AF6D3AF00E3FB05 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				08EB73B42AF6D3DC00E3FB05 /* NimbleButton.swift */,
+				08EB73BA2AF6D4E200E3FB05 /* NimbleTextField.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,9 +365,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08EB73BB2AF6D4E200E3FB05 /* NimbleTextField.swift in Sources */,
+				08EB73B52AF6D3DC00E3FB05 /* NimbleButton.swift in Sources */,
 				08EB73B22AF6C98000E3FB05 /* WelcomeViewController.swift in Sources */,
 				08EB73722AF6C5FB00E3FB05 /* AppDelegate.swift in Sources */,
 				08EB73AE2AF6C73200E3FB05 /* StringLocalized.swift in Sources */,
+				08EB73B72AF6D42600E3FB05 /* UIVIew+Ext.swift in Sources */,
+				08EB73B92AF6D47000E3FB05 /* CGFloat+Ext.swift in Sources */,
 				08EB73742AF6C5FB00E3FB05 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
