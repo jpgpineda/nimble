@@ -22,6 +22,16 @@
 		08EB73B72AF6D42600E3FB05 /* UIVIew+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73B62AF6D42600E3FB05 /* UIVIew+Ext.swift */; };
 		08EB73B92AF6D47000E3FB05 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73B82AF6D47000E3FB05 /* CGFloat+Ext.swift */; };
 		08EB73BB2AF6D4E200E3FB05 /* NimbleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73BA2AF6D4E200E3FB05 /* NimbleTextField.swift */; };
+		08EB73BD2AF801C400E3FB05 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73BC2AF801C400E3FB05 /* UILabel+Ext.swift */; };
+		08EB73BF2AF801EB00E3FB05 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73BE2AF801EB00E3FB05 /* String+Ext.swift */; };
+		08EB73C12AF8020A00E3FB05 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73C02AF8020A00E3FB05 /* UIButton+Ext.swift */; };
+		08EB73C32AF8022B00E3FB05 /* UITextfield+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73C22AF8022B00E3FB05 /* UITextfield+Ext.swift */; };
+		08EB73CB2AF8035D00E3FB05 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73C62AF8035C00E3FB05 /* LoginPresenter.swift */; };
+		08EB73CC2AF8035D00E3FB05 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73C72AF8035C00E3FB05 /* LoginRouter.swift */; };
+		08EB73CD2AF8035D00E3FB05 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73C82AF8035C00E3FB05 /* LoginViewController.swift */; };
+		08EB73CE2AF8035D00E3FB05 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73C92AF8035D00E3FB05 /* LoginConfigurator.swift */; };
+		08EB73CF2AF8035D00E3FB05 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08EB73CA2AF8035D00E3FB05 /* LoginViewController.xib */; };
+		08EB73D12AF805D800E3FB05 /* NimbleDashedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73D02AF805D800E3FB05 /* NimbleDashedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +71,16 @@
 		08EB73B62AF6D42600E3FB05 /* UIVIew+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Ext.swift"; sourceTree = "<group>"; };
 		08EB73B82AF6D47000E3FB05 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 		08EB73BA2AF6D4E200E3FB05 /* NimbleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleTextField.swift; sourceTree = "<group>"; };
+		08EB73BC2AF801C400E3FB05 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		08EB73BE2AF801EB00E3FB05 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		08EB73C02AF8020A00E3FB05 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		08EB73C22AF8022B00E3FB05 /* UITextfield+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Ext.swift"; sourceTree = "<group>"; };
+		08EB73C62AF8035C00E3FB05 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		08EB73C72AF8035C00E3FB05 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		08EB73C82AF8035C00E3FB05 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		08EB73C92AF8035D00E3FB05 /* LoginConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
+		08EB73CA2AF8035D00E3FB05 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		08EB73D02AF805D800E3FB05 /* NimbleDashedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleDashedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +195,8 @@
 		08EB73A72AF6C63D00E3FB05 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				08EB73772AF6C5FB00E3FB05 /* Welcome.storyboard */,
-				08EB73B12AF6C98000E3FB05 /* WelcomeViewController.swift */,
+				08EB73C52AF8034A00E3FB05 /* Login */,
+				08EB73C42AF802D300E3FB05 /* Welcome */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -218,8 +238,12 @@
 		08EB73B02AF6C94400E3FB05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				08EB73B62AF6D42600E3FB05 /* UIVIew+Ext.swift */,
 				08EB73B82AF6D47000E3FB05 /* CGFloat+Ext.swift */,
+				08EB73BE2AF801EB00E3FB05 /* String+Ext.swift */,
+				08EB73C02AF8020A00E3FB05 /* UIButton+Ext.swift */,
+				08EB73BC2AF801C400E3FB05 /* UILabel+Ext.swift */,
+				08EB73C22AF8022B00E3FB05 /* UITextfield+Ext.swift */,
+				08EB73B62AF6D42600E3FB05 /* UIVIew+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,8 +253,30 @@
 			children = (
 				08EB73B42AF6D3DC00E3FB05 /* NimbleButton.swift */,
 				08EB73BA2AF6D4E200E3FB05 /* NimbleTextField.swift */,
+				08EB73D02AF805D800E3FB05 /* NimbleDashedButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		08EB73C42AF802D300E3FB05 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				08EB73772AF6C5FB00E3FB05 /* Welcome.storyboard */,
+				08EB73B12AF6C98000E3FB05 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		08EB73C52AF8034A00E3FB05 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				08EB73C62AF8035C00E3FB05 /* LoginPresenter.swift */,
+				08EB73C72AF8035C00E3FB05 /* LoginRouter.swift */,
+				08EB73C82AF8035C00E3FB05 /* LoginViewController.swift */,
+				08EB73C92AF8035D00E3FB05 /* LoginConfigurator.swift */,
+				08EB73CA2AF8035D00E3FB05 /* LoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08EB73CF2AF8035D00E3FB05 /* LoginViewController.xib in Resources */,
 				08EB737E2AF6C5FB00E3FB05 /* LaunchScreen.storyboard in Resources */,
 				08EB73AC2AF6C72000E3FB05 /* Localizable.strings in Resources */,
 				08EB737B2AF6C5FB00E3FB05 /* Assets.xcassets in Resources */,
@@ -366,12 +413,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				08EB73BB2AF6D4E200E3FB05 /* NimbleTextField.swift in Sources */,
+				08EB73BD2AF801C400E3FB05 /* UILabel+Ext.swift in Sources */,
 				08EB73B52AF6D3DC00E3FB05 /* NimbleButton.swift in Sources */,
+				08EB73CD2AF8035D00E3FB05 /* LoginViewController.swift in Sources */,
 				08EB73B22AF6C98000E3FB05 /* WelcomeViewController.swift in Sources */,
 				08EB73722AF6C5FB00E3FB05 /* AppDelegate.swift in Sources */,
+				08EB73D12AF805D800E3FB05 /* NimbleDashedButton.swift in Sources */,
 				08EB73AE2AF6C73200E3FB05 /* StringLocalized.swift in Sources */,
 				08EB73B72AF6D42600E3FB05 /* UIVIew+Ext.swift in Sources */,
+				08EB73C32AF8022B00E3FB05 /* UITextfield+Ext.swift in Sources */,
+				08EB73CB2AF8035D00E3FB05 /* LoginPresenter.swift in Sources */,
 				08EB73B92AF6D47000E3FB05 /* CGFloat+Ext.swift in Sources */,
+				08EB73BF2AF801EB00E3FB05 /* String+Ext.swift in Sources */,
+				08EB73C12AF8020A00E3FB05 /* UIButton+Ext.swift in Sources */,
+				08EB73CC2AF8035D00E3FB05 /* LoginRouter.swift in Sources */,
+				08EB73CE2AF8035D00E3FB05 /* LoginConfigurator.swift in Sources */,
 				08EB73742AF6C5FB00E3FB05 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

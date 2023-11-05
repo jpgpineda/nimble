@@ -10,7 +10,7 @@ import UIKit
 class NimbleButton: UIButton {
     override func awakeFromNib() {
         setTitleColor(.systemBackground, for: .normal)
-        roundCorners([.bottomLeft, .bottomRight, .topLeft], radius: .eight)
+        roundCorners(.allCorners, radius: .eight)
         titleLabel?.font = .systemFont(ofSize: .twenty, weight: .bold)
     }
     

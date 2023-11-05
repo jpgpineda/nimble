@@ -35,4 +35,11 @@ extension UIView {
             layer.mask = mask
         }
     }
+    
+    func setUpMargins(color: UIColor) {
+        roundCorners(.allCorners, radius: .eight)
+        layer.cornerRadius = .eight
+        layer.borderWidth  = .one
+        layer.borderColor  = color.cgColor
+    }
 }

@@ -15,6 +15,12 @@ extension String {
             return getLocalizedString(#function) }
         static var forgot: String { return getLocalizedString(#function) }
         static var login: String { return getLocalizedString(#function) }
+        static var nimble: String { return getLocalizedString(#function) }
+        static var signUp: String { return getLocalizedString(#function) }
+        
+        // MARK: Welcome
+        static var welcome: String { return getLocalizedString(#function) }
+        static var begin: String { return getLocalizedString(#function) }
         
         internal static func getLocalizedString(_ key: String) -> String {
             return NSLocalizedString(key, comment: key)
