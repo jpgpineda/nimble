@@ -25,16 +25,23 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localized" value="welcomeToGBM"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localized" value="welcome"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85A-Ja-1hc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85A-Ja-1hc" customClass="NimbleButton" customModule="Nimble" customModuleProvider="target">
                                 <rect key="frame" x="24" y="741" width="345" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="7Fo-QV-7jM"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isActive" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localized" value="begin"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="presentLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KTp-wB-C8h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
