@@ -31,6 +31,11 @@ class ApiRequestDispatcher {
                     return continuation.resume(with: .failure(APIRequestError.noData))
                 }
                 
+                guard let response = response as? HTTPURLResponse,
+                      response.statusCode == HTTPCodes.ok else {
+                    return continuation.resume(with: .failure(APIRequestError.requestFailed))
+                }
+                
                 do {
                     let responseObject = try JSONDecoder().decode(T.self, from: data)
                     DispatchQueue.main.async {
