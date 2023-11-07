@@ -11,10 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewControllerViewController">
             <connections>
-                <outlet property="confirmPasswordTextField" destination="huN-mw-PqG" id="iOo-7w-5KU"/>
-                <outlet property="emailTextField" destination="fve-lB-5Ch" id="8I9-Fl-6AV"/>
-                <outlet property="nameTExtField" destination="Snr-Ha-Tek" id="sym-WB-UKc"/>
-                <outlet property="passwordTextField" destination="xnw-jh-4eQ" id="5MF-5n-5b3"/>
+                <outlet property="confirmPasswordTextField" destination="huN-mw-PqG" id="Bdb-cR-inL"/>
+                <outlet property="containerView" destination="c5A-Av-kfc" id="Zu8-jo-Lw1"/>
+                <outlet property="emailTextField" destination="fve-lB-5Ch" id="OVj-qG-03i"/>
+                <outlet property="nameTextField" destination="Snr-Ha-Tek" id="KuS-np-VpQ"/>
+                <outlet property="passwordTextField" destination="xnw-jh-4eQ" id="utJ-Tp-7mS"/>
                 <outlet property="signUpButton" destination="2t1-DY-C98" id="YhC-G3-uhN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -55,7 +56,7 @@
                                 <action selector="backToLogin:" destination="-1" eventType="touchUpInside" id="CU4-Nz-4wd"/>
                             </connections>
                         </button>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Snr-Ha-Tek">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Snr-Ha-Tek" customClass="NimbleTextField" customModule="Nimble" customModuleProvider="target">
                             <rect key="frame" x="24" y="230.66666666666666" width="345" height="39.999999999999972"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="DIr-QK-bMF"/>
@@ -66,7 +67,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="name"/>
                             </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fve-lB-5Ch">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fve-lB-5Ch" customClass="NimbleTextField" customModule="Nimble" customModuleProvider="target">
                             <rect key="frame" x="24" y="286.66666666666669" width="345" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="qMP-2Y-dGF"/>
@@ -77,7 +78,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="email"/>
                             </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnw-jh-4eQ">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnw-jh-4eQ" customClass="NimbleTextField" customModule="Nimble" customModuleProvider="target">
                             <rect key="frame" x="24" y="342.66666666666669" width="345" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Hrl-OF-XF9"/>
@@ -88,7 +89,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="password"/>
                             </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="huN-mw-PqG">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="huN-mw-PqG" customClass="NimbleTextField" customModule="Nimble" customModuleProvider="target">
                             <rect key="frame" x="24" y="398.66666666666669" width="345" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="UdA-g3-aBz"/>
