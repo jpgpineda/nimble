@@ -6,7 +6,8 @@
 //
 
 protocol LoginRouter {
-    
+    func dismissView()
+    func presentSignUp()
 }
 
 class LoginRouterImplementation: LoginRouter {
@@ -14,5 +15,13 @@ class LoginRouterImplementation: LoginRouter {
     
     init(controller: LoginViewController) {
         self.controller = controller
+    }
+    
+    func dismissView() {
+        controller.navigationController?.popViewController(animated: true)
+    }
+    
+    func presentSignUp() {
+        
     }
 }

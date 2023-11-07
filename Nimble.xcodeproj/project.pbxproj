@@ -32,6 +32,9 @@
 		08EB73CE2AF8035D00E3FB05 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73C92AF8035D00E3FB05 /* LoginConfigurator.swift */; };
 		08EB73CF2AF8035D00E3FB05 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08EB73CA2AF8035D00E3FB05 /* LoginViewController.xib */; };
 		08EB73D12AF805D800E3FB05 /* NimbleDashedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73D02AF805D800E3FB05 /* NimbleDashedButton.swift */; };
+		08EB73D42AF8086100E3FB05 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 08EB73D32AF8086100E3FB05 /* Swinject */; };
+		08EB73D62AF8087400E3FB05 /* AccessDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73D52AF8087400E3FB05 /* AccessDependency.swift */; };
+		08EB73D82AF8091400E3FB05 /* ModuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73D72AF8091400E3FB05 /* ModuleManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,8 @@
 		08EB73C92AF8035D00E3FB05 /* LoginConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
 		08EB73CA2AF8035D00E3FB05 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		08EB73D02AF805D800E3FB05 /* NimbleDashedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleDashedButton.swift; sourceTree = "<group>"; };
+		08EB73D52AF8087400E3FB05 /* AccessDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessDependency.swift; sourceTree = "<group>"; };
+		08EB73D72AF8091400E3FB05 /* ModuleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08EB73D42AF8086100E3FB05 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +177,8 @@
 		08EB73A42AF6C62100E3FB05 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				08EB73D52AF8087400E3FB05 /* AccessDependency.swift */,
+				08EB73D72AF8091400E3FB05 /* ModuleManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -295,6 +303,9 @@
 			dependencies = (
 			);
 			name = Nimble;
+			packageProductDependencies = (
+				08EB73D32AF8086100E3FB05 /* Swinject */,
+			);
 			productName = Nimble;
 			productReference = 08EB736E2AF6C5FB00E3FB05 /* Nimble.app */;
 			productType = "com.apple.product-type.application";
@@ -367,6 +378,9 @@
 				Base,
 			);
 			mainGroup = 08EB73652AF6C5FB00E3FB05;
+			packageReferences = (
+				08EB73D22AF8086100E3FB05 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 08EB736F2AF6C5FB00E3FB05 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -423,7 +437,9 @@
 				08EB73B72AF6D42600E3FB05 /* UIVIew+Ext.swift in Sources */,
 				08EB73C32AF8022B00E3FB05 /* UITextfield+Ext.swift in Sources */,
 				08EB73CB2AF8035D00E3FB05 /* LoginPresenter.swift in Sources */,
+				08EB73D82AF8091400E3FB05 /* ModuleManager.swift in Sources */,
 				08EB73B92AF6D47000E3FB05 /* CGFloat+Ext.swift in Sources */,
+				08EB73D62AF8087400E3FB05 /* AccessDependency.swift in Sources */,
 				08EB73BF2AF801EB00E3FB05 /* String+Ext.swift in Sources */,
 				08EB73C12AF8020A00E3FB05 /* UIButton+Ext.swift in Sources */,
 				08EB73CC2AF8035D00E3FB05 /* LoginRouter.swift in Sources */,
@@ -770,6 +786,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08EB73D22AF8086100E3FB05 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08EB73D32AF8086100E3FB05 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08EB73D22AF8086100E3FB05 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 08EB73662AF6C5FB00E3FB05 /* Project object */;
 }

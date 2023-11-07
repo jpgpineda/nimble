@@ -22,6 +22,7 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func presentLogin(_ sender: NimbleButton) {
-        
+        guard let viewController = ModuleManager.accessDependency.makeLogInViewController() else { return }
+        show(viewController, sender: nil)
     }
 }
