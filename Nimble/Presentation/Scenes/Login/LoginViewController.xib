@@ -44,7 +44,7 @@
                                 <constraint firstAttribute="height" constant="40" id="zWF-uJ-av7"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="email"/>
                             </userDefinedRuntimeAttributes>
@@ -55,7 +55,7 @@
                                 <constraint firstAttribute="height" constant="40" id="pSz-87-pVP"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="password"/>
                             </userDefinedRuntimeAttributes>
