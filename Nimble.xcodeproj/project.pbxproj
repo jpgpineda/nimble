@@ -47,6 +47,9 @@
 		08EB73EE2AFA005500E3FB05 /* APIRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73ED2AFA005500E3FB05 /* APIRequestError.swift */; };
 		08EB73F12AFA017E00E3FB05 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73F02AFA017E00E3FB05 /* SignUpRequest.swift */; };
 		08EB73F32AFA01A500E3FB05 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73F22AFA01A500E3FB05 /* APIRequest.swift */; };
+		08EB73F62AFA1E3F00E3FB05 /* AccessAPIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73F52AFA1E3F00E3FB05 /* AccessAPIGateway.swift */; };
+		08EB73F92AFA219000E3FB05 /* NoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73F82AFA219000E3FB05 /* NoResponse.swift */; };
+		08EB73FC2AFA225000E3FB05 /* AccessUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73FB2AFA225000E3FB05 /* AccessUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,9 @@
 		08EB73ED2AFA005500E3FB05 /* APIRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestError.swift; sourceTree = "<group>"; };
 		08EB73F02AFA017E00E3FB05 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		08EB73F22AFA01A500E3FB05 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		08EB73F52AFA1E3F00E3FB05 /* AccessAPIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessAPIGateway.swift; sourceTree = "<group>"; };
+		08EB73F82AFA219000E3FB05 /* NoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResponse.swift; sourceTree = "<group>"; };
+		08EB73FB2AFA225000E3FB05 /* AccessUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +200,7 @@
 		08EB73A12AF6C61000E3FB05 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				08EB73FA2AFA224900E3FB05 /* UseCases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -210,6 +217,8 @@
 		08EB73A52AF6C62900E3FB05 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				08EB73F72AFA218500E3FB05 /* Entities */,
+				08EB73F42AFA1E3000E3FB05 /* Gateways */,
 				08EB73EF2AFA016900E3FB05 /* Request */,
 				08EB73E62AF9FE4900E3FB05 /* Network */,
 			);
@@ -345,6 +354,30 @@
 				08EB73F02AFA017E00E3FB05 /* SignUpRequest.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		08EB73F42AFA1E3000E3FB05 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				08EB73F52AFA1E3F00E3FB05 /* AccessAPIGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		08EB73F72AFA218500E3FB05 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				08EB73F82AFA219000E3FB05 /* NoResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		08EB73FA2AFA224900E3FB05 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				08EB73FB2AFA225000E3FB05 /* AccessUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,17 +531,20 @@
 				08EB73E82AF9FE6500E3FB05 /* ApiRouter.swift in Sources */,
 				08EB73722AF6C5FB00E3FB05 /* AppDelegate.swift in Sources */,
 				08EB73D12AF805D800E3FB05 /* NimbleDashedButton.swift in Sources */,
+				08EB73F62AFA1E3F00E3FB05 /* AccessAPIGateway.swift in Sources */,
 				08EB73AE2AF6C73200E3FB05 /* StringLocalized.swift in Sources */,
 				08EB73EC2AF9FFFA00E3FB05 /* ApiRequestDispatcher.swift in Sources */,
 				08EB73B72AF6D42600E3FB05 /* UIVIew+Ext.swift in Sources */,
 				08EB73C32AF8022B00E3FB05 /* UITextfield+Ext.swift in Sources */,
 				08EB73F12AFA017E00E3FB05 /* SignUpRequest.swift in Sources */,
+				08EB73FC2AFA225000E3FB05 /* AccessUseCase.swift in Sources */,
 				08EB73CB2AF8035D00E3FB05 /* LoginPresenter.swift in Sources */,
 				08EB73D82AF8091400E3FB05 /* ModuleManager.swift in Sources */,
 				08EB73EE2AFA005500E3FB05 /* APIRequestError.swift in Sources */,
 				08EB73B92AF6D47000E3FB05 /* CGFloat+Ext.swift in Sources */,
 				08EB73D62AF8087400E3FB05 /* AccessDependency.swift in Sources */,
 				08EB73BF2AF801EB00E3FB05 /* String+Ext.swift in Sources */,
+				08EB73F92AFA219000E3FB05 /* NoResponse.swift in Sources */,
 				08EB73E22AF9F4DB00E3FB05 /* SignUpRouter.swift in Sources */,
 				08EB73C12AF8020A00E3FB05 /* UIButton+Ext.swift in Sources */,
 				08EB73CC2AF8035D00E3FB05 /* LoginRouter.swift in Sources */,

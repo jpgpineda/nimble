@@ -11,3 +11,7 @@ struct HttpMethod {
     static let GET = "GET"
     static let POST = "POST"
 }
+
+struct HTTPCodes {
+    static let ok = 200
+}
