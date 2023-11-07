@@ -32,8 +32,4 @@ class NimbleTextField: UITextField {
     @objc private func showRecoverPasswordScreen() {
 
     }
-    
-    func setState(isError: Bool) {
-        setUpMargins(color: isError ? .red : .secondaryLabel)
-    }
 }
