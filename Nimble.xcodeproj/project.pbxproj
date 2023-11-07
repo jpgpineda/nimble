@@ -41,6 +41,12 @@
 		08EB73E32AF9F4DB00E3FB05 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73DE2AF9F4DB00E3FB05 /* SignUpViewController.swift */; };
 		08EB73E42AF9F4DB00E3FB05 /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73DF2AF9F4DB00E3FB05 /* SignUpConfigurator.swift */; };
 		08EB73E52AF9F4DB00E3FB05 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08EB73E02AF9F4DB00E3FB05 /* SignUpViewController.xib */; };
+		08EB73E82AF9FE6500E3FB05 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73E72AF9FE6500E3FB05 /* ApiRouter.swift */; };
+		08EB73EA2AF9FF6A00E3FB05 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73E92AF9FF6A00E3FB05 /* Http.swift */; };
+		08EB73EC2AF9FFFA00E3FB05 /* ApiRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73EB2AF9FFFA00E3FB05 /* ApiRequestDispatcher.swift */; };
+		08EB73EE2AFA005500E3FB05 /* APIRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73ED2AFA005500E3FB05 /* APIRequestError.swift */; };
+		08EB73F12AFA017E00E3FB05 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73F02AFA017E00E3FB05 /* SignUpRequest.swift */; };
+		08EB73F32AFA01A500E3FB05 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73F22AFA01A500E3FB05 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +104,12 @@
 		08EB73DE2AF9F4DB00E3FB05 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		08EB73DF2AF9F4DB00E3FB05 /* SignUpConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
 		08EB73E02AF9F4DB00E3FB05 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		08EB73E72AF9FE6500E3FB05 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		08EB73E92AF9FF6A00E3FB05 /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		08EB73EB2AF9FFFA00E3FB05 /* ApiRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestDispatcher.swift; sourceTree = "<group>"; };
+		08EB73ED2AFA005500E3FB05 /* APIRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestError.swift; sourceTree = "<group>"; };
+		08EB73F02AFA017E00E3FB05 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		08EB73F22AFA01A500E3FB05 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +210,8 @@
 		08EB73A52AF6C62900E3FB05 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				08EB73EF2AFA016900E3FB05 /* Request */,
+				08EB73E62AF9FE4900E3FB05 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -253,6 +267,7 @@
 			children = (
 				08EB73B02AF6C94400E3FB05 /* Extensions */,
 				08EB73D92AF9F38A00E3FB05 /* Regex.swift */,
+				08EB73E92AF9FF6A00E3FB05 /* Http.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -311,6 +326,25 @@
 				08EB73E02AF9F4DB00E3FB05 /* SignUpViewController.xib */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		08EB73E62AF9FE4900E3FB05 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				08EB73E72AF9FE6500E3FB05 /* ApiRouter.swift */,
+				08EB73EB2AF9FFFA00E3FB05 /* ApiRequestDispatcher.swift */,
+				08EB73ED2AFA005500E3FB05 /* APIRequestError.swift */,
+				08EB73F22AFA01A500E3FB05 /* APIRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		08EB73EF2AFA016900E3FB05 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				08EB73F02AFA017E00E3FB05 /* SignUpRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,19 +488,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				08EB73BB2AF6D4E200E3FB05 /* NimbleTextField.swift in Sources */,
+				08EB73EA2AF9FF6A00E3FB05 /* Http.swift in Sources */,
 				08EB73DA2AF9F38A00E3FB05 /* Regex.swift in Sources */,
 				08EB73BD2AF801C400E3FB05 /* UILabel+Ext.swift in Sources */,
 				08EB73B52AF6D3DC00E3FB05 /* NimbleButton.swift in Sources */,
 				08EB73CD2AF8035D00E3FB05 /* LoginViewController.swift in Sources */,
 				08EB73B22AF6C98000E3FB05 /* WelcomeViewController.swift in Sources */,
 				08EB73E32AF9F4DB00E3FB05 /* SignUpViewController.swift in Sources */,
+				08EB73E82AF9FE6500E3FB05 /* ApiRouter.swift in Sources */,
 				08EB73722AF6C5FB00E3FB05 /* AppDelegate.swift in Sources */,
 				08EB73D12AF805D800E3FB05 /* NimbleDashedButton.swift in Sources */,
 				08EB73AE2AF6C73200E3FB05 /* StringLocalized.swift in Sources */,
+				08EB73EC2AF9FFFA00E3FB05 /* ApiRequestDispatcher.swift in Sources */,
 				08EB73B72AF6D42600E3FB05 /* UIVIew+Ext.swift in Sources */,
 				08EB73C32AF8022B00E3FB05 /* UITextfield+Ext.swift in Sources */,
+				08EB73F12AFA017E00E3FB05 /* SignUpRequest.swift in Sources */,
 				08EB73CB2AF8035D00E3FB05 /* LoginPresenter.swift in Sources */,
 				08EB73D82AF8091400E3FB05 /* ModuleManager.swift in Sources */,
+				08EB73EE2AFA005500E3FB05 /* APIRequestError.swift in Sources */,
 				08EB73B92AF6D47000E3FB05 /* CGFloat+Ext.swift in Sources */,
 				08EB73D62AF8087400E3FB05 /* AccessDependency.swift in Sources */,
 				08EB73BF2AF801EB00E3FB05 /* String+Ext.swift in Sources */,
@@ -476,6 +515,7 @@
 				08EB73E42AF9F4DB00E3FB05 /* SignUpConfigurator.swift in Sources */,
 				08EB73E12AF9F4DB00E3FB05 /* SignUpPresenter.swift in Sources */,
 				08EB73CE2AF8035D00E3FB05 /* LoginConfigurator.swift in Sources */,
+				08EB73F32AFA01A500E3FB05 /* APIRequest.swift in Sources */,
 				08EB73742AF6C5FB00E3FB05 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
