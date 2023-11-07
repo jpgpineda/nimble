@@ -7,13 +7,17 @@
 */
 
 // MARK: Login
-"email"     = "Email";
-"password"  = "Password";
-"forgot"    = "Forgot?";
-"login"     = "Log in";
-"nimble"    = "Nimble";
-"signUp"    = "Create account";
+"email"             = "Email";
+"password"          = "Password";
+"forgot"            = "Forgot?";
+"login"             = "Log in";
+"nimble"            = "Nimble";
+"signUp"            = "Create account";
 
 // MARK: Welcome
-"welcome"   = "Welcome to nimble";
-"begin"     = "Begin";
+"welcome"           = "Welcome to nimble";
+"begin"             = "Begin";
+
+// MARK: SignUp
+"name"              = "Name";
+"confirmPassword"   = "Confirm password";

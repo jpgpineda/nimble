@@ -22,6 +22,7 @@ class LoginRouterImplementation: LoginRouter {
     }
     
     func presentSignUp() {
-        
+        guard let viewController = ModuleManager.accessDependency.makeSignUpViewController() else { return }
+        controller.show(viewController, sender: nil)
     }
 }

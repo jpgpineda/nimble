@@ -36,6 +36,11 @@
 		08EB73D62AF8087400E3FB05 /* AccessDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73D52AF8087400E3FB05 /* AccessDependency.swift */; };
 		08EB73D82AF8091400E3FB05 /* ModuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73D72AF8091400E3FB05 /* ModuleManager.swift */; };
 		08EB73DA2AF9F38A00E3FB05 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73D92AF9F38A00E3FB05 /* Regex.swift */; };
+		08EB73E12AF9F4DB00E3FB05 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73DC2AF9F4DB00E3FB05 /* SignUpPresenter.swift */; };
+		08EB73E22AF9F4DB00E3FB05 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73DD2AF9F4DB00E3FB05 /* SignUpRouter.swift */; };
+		08EB73E32AF9F4DB00E3FB05 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73DE2AF9F4DB00E3FB05 /* SignUpViewController.swift */; };
+		08EB73E42AF9F4DB00E3FB05 /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73DF2AF9F4DB00E3FB05 /* SignUpConfigurator.swift */; };
+		08EB73E52AF9F4DB00E3FB05 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08EB73E02AF9F4DB00E3FB05 /* SignUpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +93,11 @@
 		08EB73D52AF8087400E3FB05 /* AccessDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessDependency.swift; sourceTree = "<group>"; };
 		08EB73D72AF8091400E3FB05 /* ModuleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleManager.swift; sourceTree = "<group>"; };
 		08EB73D92AF9F38A00E3FB05 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		08EB73DC2AF9F4DB00E3FB05 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		08EB73DD2AF9F4DB00E3FB05 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		08EB73DE2AF9F4DB00E3FB05 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		08EB73DF2AF9F4DB00E3FB05 /* SignUpConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
+		08EB73E02AF9F4DB00E3FB05 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +215,7 @@
 		08EB73A72AF6C63D00E3FB05 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				08EB73DB2AF9F4CC00E3FB05 /* SignUp */,
 				08EB73C52AF8034A00E3FB05 /* Login */,
 				08EB73C42AF802D300E3FB05 /* Welcome */,
 			);
@@ -288,6 +299,18 @@
 				08EB73CA2AF8035D00E3FB05 /* LoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		08EB73DB2AF9F4CC00E3FB05 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				08EB73DC2AF9F4DB00E3FB05 /* SignUpPresenter.swift */,
+				08EB73DD2AF9F4DB00E3FB05 /* SignUpRouter.swift */,
+				08EB73DE2AF9F4DB00E3FB05 /* SignUpViewController.swift */,
+				08EB73DF2AF9F4DB00E3FB05 /* SignUpConfigurator.swift */,
+				08EB73E02AF9F4DB00E3FB05 /* SignUpViewController.xib */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +427,7 @@
 				08EB737E2AF6C5FB00E3FB05 /* LaunchScreen.storyboard in Resources */,
 				08EB73AC2AF6C72000E3FB05 /* Localizable.strings in Resources */,
 				08EB737B2AF6C5FB00E3FB05 /* Assets.xcassets in Resources */,
+				08EB73E52AF9F4DB00E3FB05 /* SignUpViewController.xib in Resources */,
 				08EB73792AF6C5FB00E3FB05 /* Welcome.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +459,7 @@
 				08EB73B52AF6D3DC00E3FB05 /* NimbleButton.swift in Sources */,
 				08EB73CD2AF8035D00E3FB05 /* LoginViewController.swift in Sources */,
 				08EB73B22AF6C98000E3FB05 /* WelcomeViewController.swift in Sources */,
+				08EB73E32AF9F4DB00E3FB05 /* SignUpViewController.swift in Sources */,
 				08EB73722AF6C5FB00E3FB05 /* AppDelegate.swift in Sources */,
 				08EB73D12AF805D800E3FB05 /* NimbleDashedButton.swift in Sources */,
 				08EB73AE2AF6C73200E3FB05 /* StringLocalized.swift in Sources */,
@@ -445,8 +470,11 @@
 				08EB73B92AF6D47000E3FB05 /* CGFloat+Ext.swift in Sources */,
 				08EB73D62AF8087400E3FB05 /* AccessDependency.swift in Sources */,
 				08EB73BF2AF801EB00E3FB05 /* String+Ext.swift in Sources */,
+				08EB73E22AF9F4DB00E3FB05 /* SignUpRouter.swift in Sources */,
 				08EB73C12AF8020A00E3FB05 /* UIButton+Ext.swift in Sources */,
 				08EB73CC2AF8035D00E3FB05 /* LoginRouter.swift in Sources */,
+				08EB73E42AF9F4DB00E3FB05 /* SignUpConfigurator.swift in Sources */,
+				08EB73E12AF9F4DB00E3FB05 /* SignUpPresenter.swift in Sources */,
 				08EB73CE2AF8035D00E3FB05 /* LoginConfigurator.swift in Sources */,
 				08EB73742AF6C5FB00E3FB05 /* SceneDelegate.swift in Sources */,
 			);

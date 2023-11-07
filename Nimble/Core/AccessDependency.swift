@@ -10,6 +10,7 @@ import Swinject
 protocol AccessDependency {
     var container: Container { get set }
     func makeLogInViewController() -> LoginViewController?
+    func makeSignUpViewController() -> SignUpViewController?
 }
 
 class AccessDependencyImplementation: AccessDependency {
@@ -18,6 +19,7 @@ class AccessDependencyImplementation: AccessDependency {
     init(container: Container) {
         self.container = container
         registerLoginViewController()
+        registerSignUpViewController()
     }
     
     private func registerLoginViewController() {
@@ -28,5 +30,15 @@ class AccessDependencyImplementation: AccessDependency {
     
     func makeLogInViewController() -> LoginViewController? {
         return container.resolve(LoginViewController.self)
+    }
+    
+    private func registerSignUpViewController() {
+        container.register(SignUpViewController.self) { _ in
+            return SignUpViewController()
+        }
+    }
+    
+    func makeSignUpViewController() -> SignUpViewController? {
+        return container.resolve(SignUpViewController.self)
     }
 }

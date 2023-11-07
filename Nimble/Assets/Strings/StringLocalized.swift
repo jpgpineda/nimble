@@ -22,6 +22,10 @@ extension String {
         static var welcome: String { return getLocalizedString(#function) }
         static var begin: String { return getLocalizedString(#function) }
         
+        // MARK: SignUp
+        static var name: String { return getLocalizedString(#function) }
+        static var confirmPassword: String { return getLocalizedString(#function) }
+        
         internal static func getLocalizedString(_ key: String) -> String {
             return NSLocalizedString(key, comment: key)
         }
