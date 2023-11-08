@@ -8,7 +8,8 @@
 import UIKit
 
 protocol SignUpView {
-    
+    func showSuccess(message: String)
+    func showFailure(message: String)
 }
 
 protocol SignUpPresenter {
@@ -42,16 +43,20 @@ class SignUpPresenterImplementation: SignUpPresenter {
     }
     
     func requestSignUp() {
-        let parameters = SignUpRequest(name: name,
-                                       email: email,
-                                       password: password,
-                                       confirmPassword: confirmPassword)
+        let parameters = SignUpRequest(user: UserInfo(name: name,
+                                                      email: email,
+                                                      password: password,
+                                                      confirmPassword: confirmPassword))
+        router.showLoader()
         Task.init {
             do {
                 try await useCase.requestSignUp(parameters: parameters)
-                
+                router.dismissLoader()
+                view.showSuccess(message: .Localized.accountCreated)
+                router.dismissView()
             } catch {
-                
+                router.dismissLoader()
+                view.showFailure(message: error.localizedDescription)
             }
         }
     }

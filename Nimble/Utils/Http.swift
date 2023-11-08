@@ -13,5 +13,5 @@ struct HttpMethod {
 }
 
 struct HTTPCodes {
-    static let ok = 200
+    static let ok = 201
 }
