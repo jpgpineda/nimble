@@ -7,6 +7,8 @@
 
 protocol SignUpRouter {
     func dismissView()
+    func showLoader()
+    func dismissLoader()
 }
 
 class SignUpRouterImplementation: SignUpRouter {
@@ -17,6 +19,14 @@ class SignUpRouterImplementation: SignUpRouter {
     }
     
     func dismissView() {
-        controller.navigationController?.popViewController(animated: true)
+        controller.popView()
+    }
+    
+    func showLoader() {
+        controller.showLoader()
+    }
+    
+    func dismissLoader() {
+        controller.dismissLoader()
     }
 }

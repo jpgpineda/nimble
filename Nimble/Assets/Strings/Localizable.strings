@@ -21,3 +21,10 @@
 // MARK: SignUp
 "name"              = "Name";
 "confirmPassword"   = "Confirm password";
+
+// MARK: Tools
+"ups"               = "Ups!!";
+"congratsTitle"     = "Congrats!!";
+
+// MARK: Success messages
+"accountCreated"    = "Your account has been created";

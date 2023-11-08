@@ -42,7 +42,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func requestSignUp(_ sender: NimbleButton) {
-        
+        presenter.requestSignUp()
     }
     
     private func validateData() {
@@ -51,7 +51,13 @@ class SignUpViewController: UIViewController {
 }
 
 extension SignUpViewController: SignUpView {
+    func showSuccess(message: String) {
+        showSuccessAlert(message: message)
+    }
     
+    func showFailure(message: String) {
+        showErrorAlert(message: message)
+    }
 }
 
 extension SignUpViewController: UITextFieldDelegate {

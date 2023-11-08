@@ -11,13 +11,20 @@ enum ApiRouter {
     case signUp(parameters: SignUpRequest)
     
     var host: String {
-        return "https://survey-api.nimblehq.co/api/v1/"
+        return "https://survey-api.nimblehq.co/api/v1"
     }
     
     var path: String {
         switch self {
         case .signUp:
-            return "registrations"
+            return "/registrations"
+        }
+    }
+    
+    var stringUrl: String {
+        switch self {
+        case .signUp(_):
+            return host + path
         }
     }
     

@@ -11,19 +11,15 @@ protocol SignUpConfigurator {
 
 class SignUpConfiguratorImplementation: SignUpConfigurator {
     func configure(_ controller: SignUpViewController) {
-        // ApiClient
-        
         // Apigateway
-        
+        let apiGateway = AccessAPIGatewayImplementation()
         // UseCase
-        
-        // Interactor
-        
+        let useCase = AccessUseCaseImplementation(apiGateway: apiGateway)
         // Router
         let router = SignUpRouterImplementation(controller: controller)
         // Presenter
         let presenter = SignUpPresenterImplementation(view: controller,
-                                              router: router)
+                                                      router: router, accessUseCase: useCase)
         // View
         controller.presenter = presenter
     }

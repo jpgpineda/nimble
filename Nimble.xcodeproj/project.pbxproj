@@ -50,6 +50,14 @@
 		08EB73F62AFA1E3F00E3FB05 /* AccessAPIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73F52AFA1E3F00E3FB05 /* AccessAPIGateway.swift */; };
 		08EB73F92AFA219000E3FB05 /* NoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73F82AFA219000E3FB05 /* NoResponse.swift */; };
 		08EB73FC2AFA225000E3FB05 /* AccessUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73FB2AFA225000E3FB05 /* AccessUseCase.swift */; };
+		08EB73FF2AFA268F00E3FB05 /* NotificationBannerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 08EB73FE2AFA268F00E3FB05 /* NotificationBannerSwift */; };
+		08EB74012AFA26BD00E3FB05 /* UIVIewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB74002AFA26BD00E3FB05 /* UIVIewController+Ext.swift */; };
+		08EB74052AFA276900E3FB05 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB74032AFA276900E3FB05 /* LoaderViewController.swift */; };
+		08EB74062AFA276900E3FB05 /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08EB74042AFA276900E3FB05 /* LoaderViewController.xib */; };
+		08EB74092AFA27D700E3FB05 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 08EB74082AFA27D700E3FB05 /* Lottie */; };
+		08EB740B2AFA289300E3FB05 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 08EB740A2AFA289300E3FB05 /* loader.json */; };
+		08EB740D2AFA291900E3FB05 /* ToolsDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB740C2AFA291900E3FB05 /* ToolsDependency.swift */; };
+		08EB740F2AFB093600E3FB05 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB740E2AFB093600E3FB05 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +124,12 @@
 		08EB73F52AFA1E3F00E3FB05 /* AccessAPIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessAPIGateway.swift; sourceTree = "<group>"; };
 		08EB73F82AFA219000E3FB05 /* NoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResponse.swift; sourceTree = "<group>"; };
 		08EB73FB2AFA225000E3FB05 /* AccessUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessUseCase.swift; sourceTree = "<group>"; };
+		08EB74002AFA26BD00E3FB05 /* UIVIewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Ext.swift"; sourceTree = "<group>"; };
+		08EB74032AFA276900E3FB05 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		08EB74042AFA276900E3FB05 /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
+		08EB740A2AFA289300E3FB05 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		08EB740C2AFA291900E3FB05 /* ToolsDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsDependency.swift; sourceTree = "<group>"; };
+		08EB740E2AFB093600E3FB05 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +138,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				08EB73D42AF8086100E3FB05 /* Swinject in Frameworks */,
+				08EB73FF2AFA268F00E3FB05 /* NotificationBannerSwift in Frameworks */,
+				08EB74092AFA27D700E3FB05 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +226,7 @@
 			children = (
 				08EB73D52AF8087400E3FB05 /* AccessDependency.swift */,
 				08EB73D72AF8091400E3FB05 /* ModuleManager.swift */,
+				08EB740C2AFA291900E3FB05 /* ToolsDependency.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -267,6 +284,7 @@
 		08EB73AA2AF6C70500E3FB05 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				08EB740A2AFA289300E3FB05 /* loader.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -277,6 +295,7 @@
 				08EB73B02AF6C94400E3FB05 /* Extensions */,
 				08EB73D92AF9F38A00E3FB05 /* Regex.swift */,
 				08EB73E92AF9FF6A00E3FB05 /* Http.swift */,
+				08EB740E2AFB093600E3FB05 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -290,6 +309,7 @@
 				08EB73BC2AF801C400E3FB05 /* UILabel+Ext.swift */,
 				08EB73C22AF8022B00E3FB05 /* UITextfield+Ext.swift */,
 				08EB73B62AF6D42600E3FB05 /* UIVIew+Ext.swift */,
+				08EB74002AFA26BD00E3FB05 /* UIVIewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,6 +317,7 @@
 		08EB73B32AF6D3AF00E3FB05 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				08EB74022AFA275100E3FB05 /* Loader */,
 				08EB73B42AF6D3DC00E3FB05 /* NimbleButton.swift */,
 				08EB73BA2AF6D4E200E3FB05 /* NimbleTextField.swift */,
 				08EB73D02AF805D800E3FB05 /* NimbleDashedButton.swift */,
@@ -328,10 +349,10 @@
 		08EB73DB2AF9F4CC00E3FB05 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				08EB73DF2AF9F4DB00E3FB05 /* SignUpConfigurator.swift */,
 				08EB73DC2AF9F4DB00E3FB05 /* SignUpPresenter.swift */,
 				08EB73DD2AF9F4DB00E3FB05 /* SignUpRouter.swift */,
 				08EB73DE2AF9F4DB00E3FB05 /* SignUpViewController.swift */,
-				08EB73DF2AF9F4DB00E3FB05 /* SignUpConfigurator.swift */,
 				08EB73E02AF9F4DB00E3FB05 /* SignUpViewController.xib */,
 			);
 			path = SignUp;
@@ -380,6 +401,15 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		08EB74022AFA275100E3FB05 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				08EB74032AFA276900E3FB05 /* LoaderViewController.swift */,
+				08EB74042AFA276900E3FB05 /* LoaderViewController.xib */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +428,8 @@
 			name = Nimble;
 			packageProductDependencies = (
 				08EB73D32AF8086100E3FB05 /* Swinject */,
+				08EB73FE2AFA268F00E3FB05 /* NotificationBannerSwift */,
+				08EB74082AFA27D700E3FB05 /* Lottie */,
 			);
 			productName = Nimble;
 			productReference = 08EB736E2AF6C5FB00E3FB05 /* Nimble.app */;
@@ -473,6 +505,8 @@
 			mainGroup = 08EB73652AF6C5FB00E3FB05;
 			packageReferences = (
 				08EB73D22AF8086100E3FB05 /* XCRemoteSwiftPackageReference "Swinject" */,
+				08EB73FD2AFA268F00E3FB05 /* XCRemoteSwiftPackageReference "NotificationBanner" */,
+				08EB74072AFA27D700E3FB05 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 08EB736F2AF6C5FB00E3FB05 /* Products */;
 			projectDirPath = "";
@@ -492,9 +526,11 @@
 			files = (
 				08EB73CF2AF8035D00E3FB05 /* LoginViewController.xib in Resources */,
 				08EB737E2AF6C5FB00E3FB05 /* LaunchScreen.storyboard in Resources */,
+				08EB740B2AFA289300E3FB05 /* loader.json in Resources */,
 				08EB73AC2AF6C72000E3FB05 /* Localizable.strings in Resources */,
 				08EB737B2AF6C5FB00E3FB05 /* Assets.xcassets in Resources */,
 				08EB73E52AF9F4DB00E3FB05 /* SignUpViewController.xib in Resources */,
+				08EB74062AFA276900E3FB05 /* LoaderViewController.xib in Resources */,
 				08EB73792AF6C5FB00E3FB05 /* Welcome.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +560,7 @@
 				08EB73EA2AF9FF6A00E3FB05 /* Http.swift in Sources */,
 				08EB73DA2AF9F38A00E3FB05 /* Regex.swift in Sources */,
 				08EB73BD2AF801C400E3FB05 /* UILabel+Ext.swift in Sources */,
+				08EB74012AFA26BD00E3FB05 /* UIVIewController+Ext.swift in Sources */,
 				08EB73B52AF6D3DC00E3FB05 /* NimbleButton.swift in Sources */,
 				08EB73CD2AF8035D00E3FB05 /* LoginViewController.swift in Sources */,
 				08EB73B22AF6C98000E3FB05 /* WelcomeViewController.swift in Sources */,
@@ -543,7 +580,9 @@
 				08EB73EE2AFA005500E3FB05 /* APIRequestError.swift in Sources */,
 				08EB73B92AF6D47000E3FB05 /* CGFloat+Ext.swift in Sources */,
 				08EB73D62AF8087400E3FB05 /* AccessDependency.swift in Sources */,
+				08EB740D2AFA291900E3FB05 /* ToolsDependency.swift in Sources */,
 				08EB73BF2AF801EB00E3FB05 /* String+Ext.swift in Sources */,
+				08EB74052AFA276900E3FB05 /* LoaderViewController.swift in Sources */,
 				08EB73F92AFA219000E3FB05 /* NoResponse.swift in Sources */,
 				08EB73E22AF9F4DB00E3FB05 /* SignUpRouter.swift in Sources */,
 				08EB73C12AF8020A00E3FB05 /* UIButton+Ext.swift in Sources */,
@@ -552,6 +591,7 @@
 				08EB73E12AF9F4DB00E3FB05 /* SignUpPresenter.swift in Sources */,
 				08EB73CE2AF8035D00E3FB05 /* LoginConfigurator.swift in Sources */,
 				08EB73F32AFA01A500E3FB05 /* APIRequest.swift in Sources */,
+				08EB740F2AFB093600E3FB05 /* Constants.swift in Sources */,
 				08EB73742AF6C5FB00E3FB05 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -904,6 +944,22 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		08EB73FD2AFA268F00E3FB05 /* XCRemoteSwiftPackageReference "NotificationBanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Daltron/NotificationBanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		08EB74072AFA27D700E3FB05 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -911,6 +967,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08EB73D22AF8086100E3FB05 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		08EB73FE2AFA268F00E3FB05 /* NotificationBannerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08EB73FD2AFA268F00E3FB05 /* XCRemoteSwiftPackageReference "NotificationBanner" */;
+			productName = NotificationBannerSwift;
+		};
+		08EB74082AFA27D700E3FB05 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08EB74072AFA27D700E3FB05 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

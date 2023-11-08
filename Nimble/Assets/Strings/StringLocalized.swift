@@ -26,6 +26,13 @@ extension String {
         static var name: String { return getLocalizedString(#function) }
         static var confirmPassword: String { return getLocalizedString(#function) }
         
+        // MARK: Tools
+        static var ups: String { return getLocalizedString(#function) }
+        static var congratsTitle: String { return getLocalizedString(#function) }
+        
+        // MARK: Success Messages
+        static var accountCreated: String { return getLocalizedString(#function) }
+        
         internal static func getLocalizedString(_ key: String) -> String {
             return NSLocalizedString(key, comment: key)
         }
