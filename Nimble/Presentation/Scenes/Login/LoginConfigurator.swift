@@ -11,19 +11,15 @@ protocol LoginConfigurator {
 
 class LoginConfiguratorImplementation: LoginConfigurator {
     func configure(_ controller: LoginViewController) {
-        // ApiClient
-        
         // Apigateway
-        
+        let apiGateway = AccessAPIGatewayImplementation()
         // UseCase
-        
-        // Interactor
-        
+        let useCase = AccessUseCaseImplementation(apiGateway: apiGateway)
         // Router
         let router = LoginRouterImplementation(controller: controller)
         // Presenter
         let presenter = LoginPresenterImplementation(view: controller,
-                                              router: router)
+                                                     router: router, useCase: useCase)
         // View
         controller.presenter = presenter
     }
