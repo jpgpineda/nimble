@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08CCA3F02AFB1AF7004892BE /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCA3EF2AFB1AF7004892BE /* UserPreferences.swift */; };
 		08EB73722AF6C5FB00E3FB05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73712AF6C5FB00E3FB05 /* AppDelegate.swift */; };
 		08EB73742AF6C5FB00E3FB05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73732AF6C5FB00E3FB05 /* SceneDelegate.swift */; };
 		08EB73792AF6C5FB00E3FB05 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08EB73772AF6C5FB00E3FB05 /* Welcome.storyboard */; };
@@ -78,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08CCA3EF2AFB1AF7004892BE /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		08EB736E2AF6C5FB00E3FB05 /* Nimble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EB73712AF6C5FB00E3FB05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08EB73732AF6C5FB00E3FB05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08CCA3EE2AFB1AEE004892BE /* SharedPref */ = {
+			isa = PBXGroup;
+			children = (
+				08CCA3EF2AFB1AF7004892BE /* UserPreferences.swift */,
+			);
+			path = SharedPref;
+			sourceTree = "<group>";
+		};
 		08EB73652AF6C5FB00E3FB05 = {
 			isa = PBXGroup;
 			children = (
@@ -236,8 +246,9 @@
 			children = (
 				08EB73F72AFA218500E3FB05 /* Entities */,
 				08EB73F42AFA1E3000E3FB05 /* Gateways */,
-				08EB73EF2AFA016900E3FB05 /* Request */,
 				08EB73E62AF9FE4900E3FB05 /* Network */,
+				08EB73EF2AFA016900E3FB05 /* Request */,
+				08CCA3EE2AFB1AEE004892BE /* SharedPref */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -337,10 +348,10 @@
 		08EB73C52AF8034A00E3FB05 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				08EB73C92AF8035D00E3FB05 /* LoginConfigurator.swift */,
 				08EB73C62AF8035C00E3FB05 /* LoginPresenter.swift */,
 				08EB73C72AF8035C00E3FB05 /* LoginRouter.swift */,
 				08EB73C82AF8035C00E3FB05 /* LoginViewController.swift */,
-				08EB73C92AF8035D00E3FB05 /* LoginConfigurator.swift */,
 				08EB73CA2AF8035D00E3FB05 /* LoginViewController.xib */,
 			);
 			path = Login;
@@ -559,6 +570,7 @@
 				08EB73BB2AF6D4E200E3FB05 /* NimbleTextField.swift in Sources */,
 				08EB73EA2AF9FF6A00E3FB05 /* Http.swift in Sources */,
 				08EB73DA2AF9F38A00E3FB05 /* Regex.swift in Sources */,
+				08CCA3F02AFB1AF7004892BE /* UserPreferences.swift in Sources */,
 				08EB73BD2AF801C400E3FB05 /* UILabel+Ext.swift in Sources */,
 				08EB74012AFA26BD00E3FB05 /* UIVIewController+Ext.swift in Sources */,
 				08EB73B52AF6D3DC00E3FB05 /* NimbleButton.swift in Sources */,

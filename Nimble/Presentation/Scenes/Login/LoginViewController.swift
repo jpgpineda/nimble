@@ -31,6 +31,7 @@ class LoginViewController: UIViewController {
         containerView.hideKeyboardWhenTappedAround()
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        emailTextField.text = presenter.getLastSignedUser()
     }
     
     @IBAction func requestLogin(_ sender: NimbleButton) {

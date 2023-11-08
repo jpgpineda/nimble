@@ -51,9 +51,10 @@ class SignUpPresenterImplementation: SignUpPresenter {
         Task.init {
             do {
                 try await useCase.requestSignUp(parameters: parameters)
-                router.dismissLoader()
                 view.showSuccess(message: .Localized.accountCreated)
+                useCase.saveLastSignedUser(email: email)
                 router.dismissView()
+                router.dismissLoader()
             } catch {
                 router.dismissLoader()
                 view.showFailure(message: error.localizedDescription)
