@@ -50,4 +50,48 @@ extension UIViewController {
             successBanner.show()
         }
     }
+    
+    func showConfimation(title: String,
+                         message: String,
+                         cancel: String?,
+                         confirm: String,
+                         cancelAction: @escaping() -> Void,
+                         confirmAction:  @escaping() -> Void) {
+        
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .actionSheet)
+        
+        if let cancel = cancel {
+            alert.addAction(UIAlertAction(title: confirm,
+                                          style: .cancel,
+                                          handler: { (action) in
+                                            cancelAction()
+            }))
+        }
+        
+        alert.addAction(UIAlertAction(title: confirm,
+                                      style: .default,
+                                      handler: { (action) in
+                                        confirmAction()
+        }))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func manageTokenExpiration(time: Int64,
+                               signOut: @escaping() -> Void,
+                               renewSessionAction: @escaping() -> Void) {
+        let timer = Timer(timeInterval: TimeInterval(integerLiteral: time),
+                          repeats: false) { _ in
+            self.showConfimation(title: .Localized.tokenSoonToExpire,
+                                 message: .Localized.renewSession,
+                                 cancel: .Localized.signOut,
+                                 confirm: .Localized.continueTitle) {
+                signOut()
+            } confirmAction: {
+                renewSessionAction()
+            }
+        }
+    }
 }

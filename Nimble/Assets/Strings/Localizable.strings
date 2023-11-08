@@ -25,6 +25,12 @@
 // MARK: Tools
 "ups"               = "Ups!!";
 "congratsTitle"     = "Congrats!!";
+"signOut"           = "Sign out";
+"continueTitle"     = "Continue";
 
 // MARK: Success messages
 "accountCreated"    = "Your account has been created";
+
+// MARK: Session
+"tokenSoonToExpire" = "Your session is about to expire";
+"renewSession"      = "Do you whish to continue?";

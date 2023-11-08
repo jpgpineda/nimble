@@ -29,9 +29,15 @@ extension String {
         // MARK: Tools
         static var ups: String { return getLocalizedString(#function) }
         static var congratsTitle: String { return getLocalizedString(#function) }
+        static var signOut: String { return getLocalizedString(#function) }
+        static var continueTitle: String { return getLocalizedString(#function) }
         
         // MARK: Success Messages
         static var accountCreated: String { return getLocalizedString(#function) }
+        
+        // MARK: Session
+        static var tokenSoonToExpire: String { return getLocalizedString(#function) }
+        static var renewSession: String { return getLocalizedString(#function) }
         
         internal static func getLocalizedString(_ key: String) -> String {
             return NSLocalizedString(key, comment: key)

@@ -51,7 +51,21 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginView {
+    func sheduleTokenExpiration(duration: Int64) {
+        manageTokenExpiration(time: duration) {
+            print("Call to sign out API")
+        } renewSessionAction: {
+            print("Call to renew API")
+        }
+    }
     
+    func showSuccess(message: String) {
+        showSuccessAlert(message: message)
+    }
+    
+    func showFailure(message: String) {
+        showErrorAlert(message: message)
+    }
 }
 
 extension LoginViewController: UITextFieldDelegate {

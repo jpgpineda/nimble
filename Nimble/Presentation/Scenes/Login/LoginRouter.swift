@@ -8,6 +8,9 @@
 protocol LoginRouter {
     func dismissView()
     func presentSignUp()
+    func showLoaderView()
+    func dismissLoaderView()
+    func presentHome()
 }
 
 class LoginRouterImplementation: LoginRouter {
@@ -24,5 +27,17 @@ class LoginRouterImplementation: LoginRouter {
     func presentSignUp() {
         guard let viewController = ModuleManager.accessDependency.makeSignUpViewController() else { return }
         controller.show(viewController, sender: nil)
+    }
+    
+    func showLoaderView() {
+        controller.showLoader()
+    }
+    
+    func dismissLoaderView() {
+        controller.dismissLoader()
+    }
+    
+    func presentHome() {
+        
     }
 }

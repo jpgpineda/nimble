@@ -8,7 +8,9 @@
 import UIKit
 
 protocol LoginView {
-
+    func showSuccess(message: String)
+    func showFailure(message: String)
+    func sheduleTokenExpiration(duration: Int64)
 }
 
 protocol LoginPresenter {
@@ -40,7 +42,20 @@ class LoginPresenterImplementation: LoginPresenter {
     }
     
     func requestLogin() {
-        
+        let parameters = SignInRequest(email: email, password: password)
+        router.showLoaderView()
+        Task.init {
+            do {
+                let response = try await useCase.requestSignIn(parameters: parameters)
+                guard useCase.canEncryptCredentials(credential: CredentialDTO(id: response.id, token: response.accessToken)) else { return }
+                view.sheduleTokenExpiration(duration: response.expiresIn)
+                router.presentHome()
+                router.dismissLoaderView()
+            } catch {
+                router.dismissLoaderView()
+                view.showFailure(message: error.localizedDescription)
+            }
+        }
     }
     
     func dismissView() {
