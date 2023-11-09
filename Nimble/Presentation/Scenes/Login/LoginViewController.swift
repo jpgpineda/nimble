@@ -32,9 +32,11 @@ class LoginViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         emailTextField.text = presenter.getLastSignedUser()
+        presenter.email = presenter.getLastSignedUser()
     }
     
     @IBAction func requestLogin(_ sender: NimbleButton) {
+        presenter.requestLogin()
     }
     
     @IBAction func presentSignUp(_ sender: UIButton) {

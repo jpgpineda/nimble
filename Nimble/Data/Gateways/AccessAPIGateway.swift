@@ -37,12 +37,12 @@ class AccessAPIGatewayImplementation: AccessAPIGateway {
     
     func canEncryptCredentials(credential: CredentialDTO) -> Bool {
         guard let parsedPassword = credential.token.data(using: .utf8) else { return false }
-        let attributes: [String: Any] = [
+        let attributes = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrAccount as String: credential.id,
             kSecValueData as String: parsedPassword
-        ]
-        return SecItemAdd(attributes as CFDictionary, nil) != noErr
+        ] as CFDictionary
+        return SecItemAdd(attributes, nil) == errSecSuccess
     }
     
     func canRetrieveEncryptedCrendentials(id: String) -> CredentialDTO? {
