@@ -39,6 +39,9 @@ extension String {
         static var tokenSoonToExpire: String { return getLocalizedString(#function) }
         static var renewSession: String { return getLocalizedString(#function) }
         
+        // MARK: Survey list
+        static var today: String { return getLocalizedString(#function) }
+        
         internal static func getLocalizedString(_ key: String) -> String {
             return NSLocalizedString(key, comment: key)
         }

@@ -12,6 +12,14 @@
 		08ABF0AF2AFB22A300DBD7D2 /* SignInResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0AE2AFB22A300DBD7D2 /* SignInResponseDTO.swift */; };
 		08ABF0B12AFB284700DBD7D2 /* CredentialDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0B02AFB284700DBD7D2 /* CredentialDTO.swift */; };
 		08ABF0B32AFB312300DBD7D2 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0B22AFB312300DBD7D2 /* TokenManager.swift */; };
+		08ABF0BA2AFB671900DBD7D2 /* SurveyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0B52AFB671900DBD7D2 /* SurveyListPresenter.swift */; };
+		08ABF0BB2AFB671900DBD7D2 /* SurveyListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0B62AFB671900DBD7D2 /* SurveyListRouter.swift */; };
+		08ABF0BC2AFB671900DBD7D2 /* SurveyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0B72AFB671900DBD7D2 /* SurveyListViewController.swift */; };
+		08ABF0BD2AFB671900DBD7D2 /* SurveyListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0B82AFB671900DBD7D2 /* SurveyListConfigurator.swift */; };
+		08ABF0BE2AFB671900DBD7D2 /* SurveyListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08ABF0B92AFB671900DBD7D2 /* SurveyListViewController.xib */; };
+		08ABF0C02AFB67E800DBD7D2 /* SurveyDepedency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0BF2AFB67E800DBD7D2 /* SurveyDepedency.swift */; };
+		08ABF0C22AFB68C500DBD7D2 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0C12AFB68C500DBD7D2 /* UINavigationController+Ext.swift */; };
+		08ABF0C52AFCAD1100DBD7D2 /* CVDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0C42AFCAD1100DBD7D2 /* CVDateFormatter.swift */; };
 		08CCA3F02AFB1AF7004892BE /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCA3EF2AFB1AF7004892BE /* UserPreferences.swift */; };
 		08EB73722AF6C5FB00E3FB05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73712AF6C5FB00E3FB05 /* AppDelegate.swift */; };
 		08EB73742AF6C5FB00E3FB05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73732AF6C5FB00E3FB05 /* SceneDelegate.swift */; };
@@ -89,6 +97,14 @@
 		08ABF0AE2AFB22A300DBD7D2 /* SignInResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponseDTO.swift; sourceTree = "<group>"; };
 		08ABF0B02AFB284700DBD7D2 /* CredentialDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialDTO.swift; sourceTree = "<group>"; };
 		08ABF0B22AFB312300DBD7D2 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		08ABF0B52AFB671900DBD7D2 /* SurveyListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListPresenter.swift; sourceTree = "<group>"; };
+		08ABF0B62AFB671900DBD7D2 /* SurveyListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListRouter.swift; sourceTree = "<group>"; };
+		08ABF0B72AFB671900DBD7D2 /* SurveyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewController.swift; sourceTree = "<group>"; };
+		08ABF0B82AFB671900DBD7D2 /* SurveyListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListConfigurator.swift; sourceTree = "<group>"; };
+		08ABF0B92AFB671900DBD7D2 /* SurveyListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyListViewController.xib; sourceTree = "<group>"; };
+		08ABF0BF2AFB67E800DBD7D2 /* SurveyDepedency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDepedency.swift; sourceTree = "<group>"; };
+		08ABF0C12AFB68C500DBD7D2 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
+		08ABF0C42AFCAD1100DBD7D2 /* CVDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDateFormatter.swift; sourceTree = "<group>"; };
 		08CCA3EF2AFB1AF7004892BE /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		08EB736E2AF6C5FB00E3FB05 /* Nimble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EB73712AF6C5FB00E3FB05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +197,27 @@
 			path = DTOs;
 			sourceTree = "<group>";
 		};
+		08ABF0B42AFB66F800DBD7D2 /* SurveyList */ = {
+			isa = PBXGroup;
+			children = (
+				08ABF0B82AFB671900DBD7D2 /* SurveyListConfigurator.swift */,
+				08ABF0B52AFB671900DBD7D2 /* SurveyListPresenter.swift */,
+				08ABF0B62AFB671900DBD7D2 /* SurveyListRouter.swift */,
+				08ABF0B72AFB671900DBD7D2 /* SurveyListViewController.swift */,
+				08ABF0B92AFB671900DBD7D2 /* SurveyListViewController.xib */,
+			);
+			path = SurveyList;
+			sourceTree = "<group>";
+		};
+		08ABF0C32AFCACFD00DBD7D2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				08EB73D92AF9F38A00E3FB05 /* Regex.swift */,
+				08ABF0C42AFCAD1100DBD7D2 /* CVDateFormatter.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		08CCA3EE2AFB1AEE004892BE /* SharedPref */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +295,7 @@
 				08EB73D72AF8091400E3FB05 /* ModuleManager.swift */,
 				08EB740C2AFA291900E3FB05 /* ToolsDependency.swift */,
 				08ABF0B22AFB312300DBD7D2 /* TokenManager.swift */,
+				08ABF0BF2AFB67E800DBD7D2 /* SurveyDepedency.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -287,6 +325,7 @@
 		08EB73A72AF6C63D00E3FB05 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				08ABF0B42AFB66F800DBD7D2 /* SurveyList */,
 				08EB73DB2AF9F4CC00E3FB05 /* SignUp */,
 				08EB73C52AF8034A00E3FB05 /* Login */,
 				08EB73C42AF802D300E3FB05 /* Welcome */,
@@ -324,8 +363,8 @@
 		08EB73AF2AF6C93E00E3FB05 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				08ABF0C32AFCACFD00DBD7D2 /* Tools */,
 				08EB73B02AF6C94400E3FB05 /* Extensions */,
-				08EB73D92AF9F38A00E3FB05 /* Regex.swift */,
 				08EB73E92AF9FF6A00E3FB05 /* Http.swift */,
 				08EB740E2AFB093600E3FB05 /* Constants.swift */,
 			);
@@ -339,6 +378,7 @@
 				08EB73BE2AF801EB00E3FB05 /* String+Ext.swift */,
 				08EB73C02AF8020A00E3FB05 /* UIButton+Ext.swift */,
 				08EB73BC2AF801C400E3FB05 /* UILabel+Ext.swift */,
+				08ABF0C12AFB68C500DBD7D2 /* UINavigationController+Ext.swift */,
 				08EB73C22AF8022B00E3FB05 /* UITextfield+Ext.swift */,
 				08EB73B62AF6D42600E3FB05 /* UIVIew+Ext.swift */,
 				08EB74002AFA26BD00E3FB05 /* UIVIewController+Ext.swift */,
@@ -564,6 +604,7 @@
 				08EB73AC2AF6C72000E3FB05 /* Localizable.strings in Resources */,
 				08EB737B2AF6C5FB00E3FB05 /* Assets.xcassets in Resources */,
 				08EB73E52AF9F4DB00E3FB05 /* SignUpViewController.xib in Resources */,
+				08ABF0BE2AFB671900DBD7D2 /* SurveyListViewController.xib in Resources */,
 				08EB74062AFA276900E3FB05 /* LoaderViewController.xib in Resources */,
 				08EB73792AF6C5FB00E3FB05 /* Welcome.storyboard in Resources */,
 			);
@@ -598,12 +639,16 @@
 				08EB73BD2AF801C400E3FB05 /* UILabel+Ext.swift in Sources */,
 				08EB74012AFA26BD00E3FB05 /* UIVIewController+Ext.swift in Sources */,
 				08EB73B52AF6D3DC00E3FB05 /* NimbleButton.swift in Sources */,
+				08ABF0C22AFB68C500DBD7D2 /* UINavigationController+Ext.swift in Sources */,
 				08EB73CD2AF8035D00E3FB05 /* LoginViewController.swift in Sources */,
 				08EB73B22AF6C98000E3FB05 /* WelcomeViewController.swift in Sources */,
+				08ABF0BA2AFB671900DBD7D2 /* SurveyListPresenter.swift in Sources */,
 				08EB73E32AF9F4DB00E3FB05 /* SignUpViewController.swift in Sources */,
 				08EB73E82AF9FE6500E3FB05 /* ApiRouter.swift in Sources */,
 				08EB73722AF6C5FB00E3FB05 /* AppDelegate.swift in Sources */,
+				08ABF0C52AFCAD1100DBD7D2 /* CVDateFormatter.swift in Sources */,
 				08EB73D12AF805D800E3FB05 /* NimbleDashedButton.swift in Sources */,
+				08ABF0C02AFB67E800DBD7D2 /* SurveyDepedency.swift in Sources */,
 				08ABF0B12AFB284700DBD7D2 /* CredentialDTO.swift in Sources */,
 				08ABF0AA2AFB1F6600DBD7D2 /* SignInRequest.swift in Sources */,
 				08ABF0B32AFB312300DBD7D2 /* TokenManager.swift in Sources */,
@@ -612,6 +657,7 @@
 				08EB73EC2AF9FFFA00E3FB05 /* ApiRequestDispatcher.swift in Sources */,
 				08EB73B72AF6D42600E3FB05 /* UIVIew+Ext.swift in Sources */,
 				08EB73C32AF8022B00E3FB05 /* UITextfield+Ext.swift in Sources */,
+				08ABF0BD2AFB671900DBD7D2 /* SurveyListConfigurator.swift in Sources */,
 				08EB73F12AFA017E00E3FB05 /* SignUpRequest.swift in Sources */,
 				08EB73FC2AFA225000E3FB05 /* AccessUseCase.swift in Sources */,
 				08EB73CB2AF8035D00E3FB05 /* LoginPresenter.swift in Sources */,
@@ -620,6 +666,8 @@
 				08EB73B92AF6D47000E3FB05 /* CGFloat+Ext.swift in Sources */,
 				08EB73D62AF8087400E3FB05 /* AccessDependency.swift in Sources */,
 				08EB740D2AFA291900E3FB05 /* ToolsDependency.swift in Sources */,
+				08ABF0BB2AFB671900DBD7D2 /* SurveyListRouter.swift in Sources */,
+				08ABF0BC2AFB671900DBD7D2 /* SurveyListViewController.swift in Sources */,
 				08EB73BF2AF801EB00E3FB05 /* String+Ext.swift in Sources */,
 				08EB74052AFA276900E3FB05 /* LoaderViewController.swift in Sources */,
 				08EB73F92AFA219000E3FB05 /* NoResponse.swift in Sources */,
