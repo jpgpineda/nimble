@@ -94,4 +94,12 @@ extension UIViewController {
             }
         }
     }
+    
+    func presentNewFlow(rootView: UIViewController) {
+        DispatchQueue.main.async {
+            let navigationController = UINavigationController(rootViewController: rootView)
+            navigationController.setupPresentation()
+            self.present(navigationController, animated: true)
+        }
+    }
 }

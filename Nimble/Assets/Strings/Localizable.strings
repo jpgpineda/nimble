@@ -34,3 +34,6 @@
 // MARK: Session
 "tokenSoonToExpire" = "Your session is about to expire";
 "renewSession"      = "Do you whish to continue?";
+
+// MARK: Survey list
+"today"             = "Today";
