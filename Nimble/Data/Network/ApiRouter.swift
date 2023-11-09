@@ -9,6 +9,7 @@ import Foundation
 
 enum ApiRouter {
     case signUp(parameters: SignUpRequest)
+    case signIn(parameters: SignInRequest)
     
     var host: String {
         return "https://survey-api.nimblehq.co/api/v1"
@@ -18,19 +19,20 @@ enum ApiRouter {
         switch self {
         case .signUp:
             return "/registrations"
+        case .signIn:
+            return "//oauth/token"
         }
     }
     
     var stringUrl: String {
-        switch self {
-        case .signUp(_):
-            return host + path
-        }
+        return host + path
     }
     
     var method: String {
         switch self {
         case .signUp:
+            return HttpMethod.POST
+        case .signIn:
             return HttpMethod.POST
         }
     }
@@ -45,6 +47,8 @@ enum ApiRouter {
     var body: Data? {
         switch self {
         case .signUp(let parameters):
+            return try? JSONEncoder().encode(parameters)
+        case .signIn(let parameters):
             return try? JSONEncoder().encode(parameters)
         }
     }

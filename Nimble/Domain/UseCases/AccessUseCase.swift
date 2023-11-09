@@ -10,8 +10,11 @@ import Foundation
 protocol AccessUseCase {
     var apiGateway: AccessAPIGateway { get set }
     func requestSignUp(parameters: SignUpRequest) async throws -> NoResponse
+    func requestSignIn(parameters: SignInRequest) async throws -> SignInResponseDTO
     func saveLastSignedUser(email: String)
     func getLastSignedUser() -> String
+    func canEncryptCredentials(credential: CredentialDTO) -> Bool
+    func canRetrieveEncryptedCrendentials(id: String) -> CredentialDTO?
 }
 
 class AccessUseCaseImplementation: AccessUseCase {
@@ -25,11 +28,24 @@ class AccessUseCaseImplementation: AccessUseCase {
         return try await apiGateway.requestSignUp(parameters: parameters)
     }
     
+    func requestSignIn(parameters: SignInRequest) async throws -> SignInResponseDTO {
+        let response = try await apiGateway.requestSignIn(parameters: parameters)
+        return SignInResponseDTO(with: response)
+    }
+    
     func saveLastSignedUser(email: String) {
         apiGateway.saveLastSignedUser(email: email)
     }
     
     func getLastSignedUser() -> String {
         return apiGateway.getLastSignedUser()
+    }
+    
+    func canEncryptCredentials(credential: CredentialDTO) -> Bool {
+        return apiGateway.canEncryptCredentials(credential: credential)
+    }
+    
+    func canRetrieveEncryptedCrendentials(id: String) -> CredentialDTO? {
+        return apiGateway.canRetrieveEncryptedCrendentials(id: id)
     }
 }

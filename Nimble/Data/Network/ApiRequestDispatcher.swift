@@ -35,8 +35,7 @@ class ApiRequestDispatcher {
                 print("DATA: \(String(describing: String(data: data, encoding: .utf8)))")
                 
                 if let response = response as? HTTPURLResponse {
-                    print("Response: \(response)")
-                    if response.statusCode != HTTPCodes.ok {
+                    if !HTTPCodes.validResponseCode.contains(response.statusCode) {
                         return continuation.resume(with: .failure(APIRequestError.requestFailed))
                     }
                 }
