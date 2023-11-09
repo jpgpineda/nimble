@@ -11,19 +11,16 @@ protocol SurveyListConfigurator {
 
 class SurveyListConfiguratorImplementation: SurveyListConfigurator {
     func configure(_ controller: SurveyListViewController) {
-        // ApiClient
-        
         // Apigateway
-        
+        let apiGateway = SurveyApiGatewayImplementation()
         // UseCase
-        
-        // Interactor
-        
+        let useCase = SurveyUseCaseImplementation(apiGateway: apiGateway)
         // Router
         let router = SurveyListRouterImplementation(controller: controller)
         // Presenter
         let presenter = SurveyListPresenterImplementation(view: controller,
-                                              router: router)
+                                                          router: router,
+                                                          useCase: useCase)
         // View
         controller.presenter = presenter
     }

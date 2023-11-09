@@ -14,7 +14,6 @@ class SurveyListViewController: UIViewController {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var todayDateLabel: UILabel!
     @IBOutlet weak var surveyPageControl: UIPageControl!
-    
     //////////////////////////////////////
     // MARK: Properties
     //////////////////////////////////////
@@ -24,6 +23,7 @@ class SurveyListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(self)
+        presenter.fetchSurveys()
         setupView()
     }
     
@@ -32,9 +32,16 @@ class SurveyListViewController: UIViewController {
     }
     
     @IBAction func presentProfile(_ sender: UIButton) {
+        
     }
 }
 
 extension SurveyListViewController: SurveyListView {
+    func showFailure(message: String) {
+        showErrorAlert(message: message)
+    }
     
+    func updateData(with surveys: [SurveyDTO]) {
+        print(surveys)
+    }
 }

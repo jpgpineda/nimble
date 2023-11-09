@@ -10,6 +10,7 @@ import Foundation
 enum ApiRouter {
     case signUp(parameters: SignUpRequest)
     case signIn(parameters: SignInRequest)
+    case fetchSurveys(parameters: FetchSurveysRequest)
     
     var host: String {
         return "https://survey-api.nimblehq.co/api/v1"
@@ -21,6 +22,11 @@ enum ApiRouter {
             return "/registrations"
         case .signIn:
             return "//oauth/token"
+        case .fetchSurveys(let parameters):
+            let formattedPath = String(format: "surveys?page[number]=%d&page[size]=%d",
+                                       parameters.pageNumber,
+                                       parameters.pageSize)
+            return formattedPath
         }
     }
     
@@ -34,6 +40,8 @@ enum ApiRouter {
             return HttpMethod.POST
         case .signIn:
             return HttpMethod.POST
+        case .fetchSurveys:
+            return HttpMethod.GET
         }
     }
     
@@ -50,6 +58,8 @@ enum ApiRouter {
             return try? JSONEncoder().encode(parameters)
         case .signIn(let parameters):
             return try? JSONEncoder().encode(parameters)
+        case .fetchSurveys:
+            return nil
         }
     }
 }
