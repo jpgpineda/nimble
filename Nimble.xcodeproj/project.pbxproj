@@ -20,6 +20,12 @@
 		08ABF0C02AFB67E800DBD7D2 /* SurveyDepedency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0BF2AFB67E800DBD7D2 /* SurveyDepedency.swift */; };
 		08ABF0C22AFB68C500DBD7D2 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0C12AFB68C500DBD7D2 /* UINavigationController+Ext.swift */; };
 		08ABF0C52AFCAD1100DBD7D2 /* CVDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0C42AFCAD1100DBD7D2 /* CVDateFormatter.swift */; };
+		08ABF0C72AFCC47B00DBD7D2 /* SurveyApiGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0C62AFCC47B00DBD7D2 /* SurveyApiGateway.swift */; };
+		08ABF0C92AFCC53700DBD7D2 /* SurveyListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0C82AFCC53700DBD7D2 /* SurveyListResponse.swift */; };
+		08ABF0CB2AFCC69200DBD7D2 /* FetchSurveysRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0CA2AFCC69200DBD7D2 /* FetchSurveysRequest.swift */; };
+		08ABF0CD2AFCC7A000DBD7D2 /* SurveyListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0CC2AFCC7A000DBD7D2 /* SurveyListDTO.swift */; };
+		08ABF0CF2AFCC8C900DBD7D2 /* SurveyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0CE2AFCC8C900DBD7D2 /* SurveyUseCase.swift */; };
+		08ABF0D12AFCCA4600DBD7D2 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0D02AFCCA4600DBD7D2 /* Int+Ext.swift */; };
 		08CCA3F02AFB1AF7004892BE /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCA3EF2AFB1AF7004892BE /* UserPreferences.swift */; };
 		08EB73722AF6C5FB00E3FB05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73712AF6C5FB00E3FB05 /* AppDelegate.swift */; };
 		08EB73742AF6C5FB00E3FB05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EB73732AF6C5FB00E3FB05 /* SceneDelegate.swift */; };
@@ -105,6 +111,12 @@
 		08ABF0BF2AFB67E800DBD7D2 /* SurveyDepedency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDepedency.swift; sourceTree = "<group>"; };
 		08ABF0C12AFB68C500DBD7D2 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		08ABF0C42AFCAD1100DBD7D2 /* CVDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDateFormatter.swift; sourceTree = "<group>"; };
+		08ABF0C62AFCC47B00DBD7D2 /* SurveyApiGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyApiGateway.swift; sourceTree = "<group>"; };
+		08ABF0C82AFCC53700DBD7D2 /* SurveyListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListResponse.swift; sourceTree = "<group>"; };
+		08ABF0CA2AFCC69200DBD7D2 /* FetchSurveysRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSurveysRequest.swift; sourceTree = "<group>"; };
+		08ABF0CC2AFCC7A000DBD7D2 /* SurveyListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListDTO.swift; sourceTree = "<group>"; };
+		08ABF0CE2AFCC8C900DBD7D2 /* SurveyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUseCase.swift; sourceTree = "<group>"; };
+		08ABF0D02AFCCA4600DBD7D2 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		08CCA3EF2AFB1AF7004892BE /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		08EB736E2AF6C5FB00E3FB05 /* Nimble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EB73712AF6C5FB00E3FB05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +205,7 @@
 			children = (
 				08ABF0AE2AFB22A300DBD7D2 /* SignInResponseDTO.swift */,
 				08ABF0B02AFB284700DBD7D2 /* CredentialDTO.swift */,
+				08ABF0CC2AFCC7A000DBD7D2 /* SurveyListDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -382,6 +395,7 @@
 				08EB73C22AF8022B00E3FB05 /* UITextfield+Ext.swift */,
 				08EB73B62AF6D42600E3FB05 /* UIVIew+Ext.swift */,
 				08EB74002AFA26BD00E3FB05 /* UIVIewController+Ext.swift */,
+				08ABF0D02AFCCA4600DBD7D2 /* Int+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -446,6 +460,7 @@
 			children = (
 				08EB73F02AFA017E00E3FB05 /* SignUpRequest.swift */,
 				08ABF0A92AFB1F6600DBD7D2 /* SignInRequest.swift */,
+				08ABF0CA2AFCC69200DBD7D2 /* FetchSurveysRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -454,6 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				08EB73F52AFA1E3F00E3FB05 /* AccessAPIGateway.swift */,
+				08ABF0C62AFCC47B00DBD7D2 /* SurveyApiGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -463,6 +479,7 @@
 			children = (
 				08EB73F82AFA219000E3FB05 /* NoResponse.swift */,
 				08ABF0AB2AFB202F00DBD7D2 /* SignInResponse.swift */,
+				08ABF0C82AFCC53700DBD7D2 /* SurveyListResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -471,6 +488,7 @@
 			isa = PBXGroup;
 			children = (
 				08EB73FB2AFA225000E3FB05 /* AccessUseCase.swift */,
+				08ABF0CE2AFCC8C900DBD7D2 /* SurveyUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -631,11 +649,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08ABF0C92AFCC53700DBD7D2 /* SurveyListResponse.swift in Sources */,
 				08EB73BB2AF6D4E200E3FB05 /* NimbleTextField.swift in Sources */,
 				08EB73EA2AF9FF6A00E3FB05 /* Http.swift in Sources */,
 				08EB73DA2AF9F38A00E3FB05 /* Regex.swift in Sources */,
 				08CCA3F02AFB1AF7004892BE /* UserPreferences.swift in Sources */,
+				08ABF0CF2AFCC8C900DBD7D2 /* SurveyUseCase.swift in Sources */,
 				08ABF0AF2AFB22A300DBD7D2 /* SignInResponseDTO.swift in Sources */,
+				08ABF0D12AFCCA4600DBD7D2 /* Int+Ext.swift in Sources */,
 				08EB73BD2AF801C400E3FB05 /* UILabel+Ext.swift in Sources */,
 				08EB74012AFA26BD00E3FB05 /* UIVIewController+Ext.swift in Sources */,
 				08EB73B52AF6D3DC00E3FB05 /* NimbleButton.swift in Sources */,
@@ -652,6 +673,7 @@
 				08ABF0B12AFB284700DBD7D2 /* CredentialDTO.swift in Sources */,
 				08ABF0AA2AFB1F6600DBD7D2 /* SignInRequest.swift in Sources */,
 				08ABF0B32AFB312300DBD7D2 /* TokenManager.swift in Sources */,
+				08ABF0CB2AFCC69200DBD7D2 /* FetchSurveysRequest.swift in Sources */,
 				08EB73F62AFA1E3F00E3FB05 /* AccessAPIGateway.swift in Sources */,
 				08EB73AE2AF6C73200E3FB05 /* StringLocalized.swift in Sources */,
 				08EB73EC2AF9FFFA00E3FB05 /* ApiRequestDispatcher.swift in Sources */,
@@ -671,10 +693,12 @@
 				08EB73BF2AF801EB00E3FB05 /* String+Ext.swift in Sources */,
 				08EB74052AFA276900E3FB05 /* LoaderViewController.swift in Sources */,
 				08EB73F92AFA219000E3FB05 /* NoResponse.swift in Sources */,
+				08ABF0C72AFCC47B00DBD7D2 /* SurveyApiGateway.swift in Sources */,
 				08EB73E22AF9F4DB00E3FB05 /* SignUpRouter.swift in Sources */,
 				08EB73C12AF8020A00E3FB05 /* UIButton+Ext.swift in Sources */,
 				08EB73CC2AF8035D00E3FB05 /* LoginRouter.swift in Sources */,
 				08EB73E42AF9F4DB00E3FB05 /* SignUpConfigurator.swift in Sources */,
+				08ABF0CD2AFCC7A000DBD7D2 /* SurveyListDTO.swift in Sources */,
 				08EB73E12AF9F4DB00E3FB05 /* SignUpPresenter.swift in Sources */,
 				08EB73CE2AF8035D00E3FB05 /* LoginConfigurator.swift in Sources */,
 				08EB73F32AFA01A500E3FB05 /* APIRequest.swift in Sources */,

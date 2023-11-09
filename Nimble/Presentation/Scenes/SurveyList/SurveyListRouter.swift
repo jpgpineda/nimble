@@ -6,7 +6,10 @@
 //
 
 protocol SurveyListRouter {
-    
+    func showLoaderView()
+    func dismissLoaderView()
+    func showMenu()
+    func showSurveyDetail()
 }
 
 class SurveyListRouterImplementation: SurveyListRouter {
@@ -14,5 +17,21 @@ class SurveyListRouterImplementation: SurveyListRouter {
     
     init(controller: SurveyListViewController) {
         self.controller = controller
+    }
+    
+    func showLoaderView() {
+        
+    }
+    
+    func dismissLoaderView() {
+        
+    }
+    
+    func showMenu() {
+        
+    }
+    
+    func showSurveyDetail() {
+        
     }
 }
