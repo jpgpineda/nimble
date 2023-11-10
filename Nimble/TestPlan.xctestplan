@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "9B091A4E-51A0-452B-8273-95911B5CE81B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Nimble.xcodeproj",
+        "identifier" : "08EB73832AF6C5FC00E3FB05",
+        "name" : "NimbleTests"
+      }
+    }
+  ],
+  "version" : 1
+}

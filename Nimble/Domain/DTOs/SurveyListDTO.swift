@@ -18,7 +18,7 @@ struct SurveyListDTO {
 
 struct SurveyDTO {
     let id: String
-    let type: TypeEnum
+    let type: String?
     let attributes: SurveyAttributesDTO
     
     init(with response: Survey) {

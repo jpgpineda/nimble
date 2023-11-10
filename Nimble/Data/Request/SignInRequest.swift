@@ -28,4 +28,12 @@ struct SignInRequest: Codable {
         clientId = Constants.clientId
         clientSecret = Constants.clientSecret
     }
+    
+    init() {
+        grantType = .empty
+        email = .empty
+        password = .empty
+        clientId = .empty
+        clientSecret = .empty
+    }
 }

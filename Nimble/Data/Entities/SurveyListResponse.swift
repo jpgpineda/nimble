@@ -15,12 +15,8 @@ struct SurveyListResponse: Codable {
 // MARK: - Survey
 struct Survey: Codable {
     let id: String
-    let type: TypeEnum
+    let type: String?
     let attributes: Attributes
-}
-
-enum TypeEnum: String, Codable {
-    case surveySimple = "survey_simple"
 }
 
 // MARK: - Attributes
