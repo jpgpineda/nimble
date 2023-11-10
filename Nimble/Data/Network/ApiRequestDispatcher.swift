@@ -14,12 +14,15 @@ class ApiRequestDispatcher {
         var urlRequest = URLRequest(url: url)
         print("URL: \(urlRequest)")
         urlRequest.httpMethod = apiRouter.method
-        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.addValue("application/json", forHTTPHeaderField: HTTPHeaders.contentType)
         if let body = apiRouter.body {
             urlRequest.httpBody = body
             if let jsonString = NSString(data: body, encoding: String.Encoding.utf8.rawValue) {
                 print("BODY: \(jsonString)")
             }
+        }
+        if let token = apiRouter.token {
+            urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: HTTPHeaders.authorization)
         }
         let session = URLSession(configuration: .default)
         return try await withCheckedThrowingContinuation { continuation in
@@ -32,7 +35,9 @@ class ApiRequestDispatcher {
                     return continuation.resume(with: .failure(APIRequestError.noData))
                 }
                 
-                print("DATA: \(String(describing: String(data: data, encoding: .utf8)))")
+                if let jsonString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
+                    print("DATA: \(jsonString)")
+                }
                 
                 if let response = response as? HTTPURLResponse {
                     if !HTTPCodes.validResponseCode.contains(response.statusCode) {

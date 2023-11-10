@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SurveyListViewControllerViewController">
             <connections>
                 <outlet property="profileButton" destination="Jmk-UX-Rff" id="ZEV-1L-zwT"/>
-                <outlet property="surveyPageControl" destination="bOk-Wp-gmq" id="F32-1M-RjG"/>
+                <outlet property="surveyContainerView" destination="GDN-uF-L7Y" id="LaJ-7Y-kYB"/>
                 <outlet property="todayDateLabel" destination="eCG-if-lFC" id="Unv-0D-2kj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,10 +21,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="bOk-Wp-gmq">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDN-uF-L7Y">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                    <color key="backgroundColor" systemColor="labelColor"/>
-                </pageControl>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCG-if-lFC">
                     <rect key="frame" x="23.999999999999996" y="91" width="54.666666666666657" height="26.333333333333329"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
@@ -32,8 +32,8 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcy-ec-Km4">
-                    <rect key="frame" x="24" y="121.33333333333331" width="62" height="30"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                    <rect key="frame" x="24" y="121.33333333333331" width="74.666666666666671" height="36"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
@@ -41,7 +41,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmk-UX-Rff">
-                    <rect key="frame" x="337" y="120.33333333333331" width="32" height="32"/>
+                    <rect key="frame" x="337" y="123.33333333333331" width="32" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="32" id="6Jw-GP-XX6"/>
                         <constraint firstAttribute="height" constant="32" id="HMj-SY-tv8"/>
@@ -56,23 +56,23 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Jmk-UX-Rff" firstAttribute="centerY" secondItem="gcy-ec-Km4" secondAttribute="centerY" id="0DQ-4v-hR7"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bOk-Wp-gmq" secondAttribute="trailing" id="8Qm-8n-5ei"/>
+                <constraint firstAttribute="bottom" secondItem="GDN-uF-L7Y" secondAttribute="bottom" id="2gG-wb-NRA"/>
+                <constraint firstItem="GDN-uF-L7Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="40b-9e-jGV"/>
+                <constraint firstItem="GDN-uF-L7Y" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Cew-2J-0KB"/>
+                <constraint firstItem="GDN-uF-L7Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ENE-Fy-nwj"/>
                 <constraint firstItem="gcy-ec-Km4" firstAttribute="top" secondItem="eCG-if-lFC" secondAttribute="bottom" constant="4" id="Jao-Yp-oxt"/>
                 <constraint firstItem="eCG-if-lFC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="K48-W7-Puf"/>
                 <constraint firstItem="eCG-if-lFC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="VpS-Nu-Bee"/>
-                <constraint firstAttribute="bottom" secondItem="bOk-Wp-gmq" secondAttribute="bottom" id="bx1-gT-clM"/>
                 <constraint firstItem="gcy-ec-Km4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="cAQ-BG-H1e"/>
-                <constraint firstItem="bOk-Wp-gmq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="h3C-ye-J7Y"/>
-                <constraint firstItem="bOk-Wp-gmq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uk2-5c-S9f"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jmk-UX-Rff" secondAttribute="trailing" constant="24" id="ygW-v4-EeV"/>
             </constraints>
-            <point key="canvasLocation" x="-399" y="-41"/>
+            <point key="canvasLocation" x="-399.23664122137404" y="-41.549295774647888"/>
         </view>
+        <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="1uM-UN-I6r">
+            <point key="canvasLocation" x="415" y="-44"/>
+        </pageViewController>
     </objects>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

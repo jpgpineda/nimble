@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SurveyViewControllerViewController">
+            <connections>
+                <outlet property="coverImageView" destination="NMa-cz-XKl" id="WFM-li-g56"/>
+                <outlet property="detailButton" destination="XBr-lq-ch1" id="vjK-wz-hjp"/>
+                <outlet property="surveyDescriptionLabel" destination="VwU-aR-8Pn" id="TWM-0P-0di"/>
+                <outlet property="surveyTitleLabel" destination="tTM-bT-ITl" id="OU2-qq-5kz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hiking" translatesAutoresizingMaskIntoConstraints="NO" id="NMa-cz-XKl">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwU-aR-8Pn">
+                    <rect key="frame" x="24" y="761" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBr-lq-ch1">
+                    <rect key="frame" x="324" y="749" width="45" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="MAQ-b5-oF2"/>
+                        <constraint firstAttribute="height" constant="45" id="kUz-8b-kGS"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal">
+                        <imageReference key="image" image="chevron.forward" catalog="system" symbolScale="large"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                    </state>
+                    <connections>
+                        <action selector="goToSurveyDetatil:" destination="-1" eventType="touchUpInside" id="961-a5-sTl"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTM-bT-ITl">
+                    <rect key="frame" x="24" y="701" width="337" height="36"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="VwU-aR-8Pn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="6Nk-JC-99t"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XBr-lq-ch1" secondAttribute="trailing" constant="24" id="9G4-fE-9B5"/>
+                <constraint firstItem="NMa-cz-XKl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DoX-qa-ocT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tTM-bT-ITl" secondAttribute="trailing" constant="32" id="KeK-9P-vR1"/>
+                <constraint firstItem="tTM-bT-ITl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="RWV-M8-MtI"/>
+                <constraint firstItem="VwU-aR-8Pn" firstAttribute="centerY" secondItem="XBr-lq-ch1" secondAttribute="centerY" id="Ric-C9-jQ4"/>
+                <constraint firstItem="VwU-aR-8Pn" firstAttribute="top" secondItem="tTM-bT-ITl" secondAttribute="bottom" constant="24" id="SIc-z7-wmk"/>
+                <constraint firstAttribute="bottom" secondItem="NMa-cz-XKl" secondAttribute="bottom" id="Z15-sM-GXD"/>
+                <constraint firstItem="NMa-cz-XKl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aGB-8y-HjR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XBr-lq-ch1" secondAttribute="bottom" constant="24" id="v5T-VR-A4M"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NMa-cz-XKl" secondAttribute="trailing" id="y0Y-2A-IJH"/>
+            </constraints>
+            <point key="canvasLocation" x="-399.23664122137404" y="-41.549295774647888"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.forward" catalog="system" width="97" height="128"/>
+        <image name="hiking" width="612" height="792"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

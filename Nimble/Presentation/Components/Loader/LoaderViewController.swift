@@ -12,13 +12,17 @@ class LoaderViewController: UIViewController {
     //////////////////////////////////////
     // MARK: Outlets
     //////////////////////////////////////
-    @IBOutlet weak var animationView: LottieAnimationView!
+    @IBOutlet weak var animationView: UIView!
     //////////////////////////////////////
     // MARK: Properties
     //////////////////////////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
-        animationView.loopMode = .loop
-        animationView.play()
+        let lottieAnimation: LottieAnimationView = .init(name: "loader")
+        lottieAnimation.frame = animationView.bounds
+        lottieAnimation.contentMode = .scaleAspectFit
+        lottieAnimation.loopMode = .loop
+        animationView.addSubview(lottieAnimation)
+        lottieAnimation.play()
     }
 }

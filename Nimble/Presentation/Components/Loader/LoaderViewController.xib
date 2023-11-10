@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoaderViewController" customModule="Nimble" customModuleProvider="target">
             <connections>
-                <outlet property="animationView" destination="RaV-Zq-jaM" id="Rcp-HU-aqp"/>
+                <outlet property="animationView" destination="RaV-Zq-jaM" id="ROg-qF-SF9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-Zq-jaM" customClass="LottieAnimationView" customModule="Lottie">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-Zq-jaM">
                     <rect key="frame" x="132.66666666666666" y="374.66666666666669" width="127.99999999999997" height="128"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>

@@ -13,8 +13,6 @@ protocol AccessUseCase {
     func requestSignIn(parameters: SignInRequest) async throws -> SignInResponseDTO
     func saveLastSignedUser(email: String)
     func getLastSignedUser() -> String
-    func canEncryptCredentials(credential: CredentialDTO) -> Bool
-    func canRetrieveEncryptedCrendentials(id: String) -> CredentialDTO?
 }
 
 class AccessUseCaseImplementation: AccessUseCase {
@@ -39,13 +37,5 @@ class AccessUseCaseImplementation: AccessUseCase {
     
     func getLastSignedUser() -> String {
         return apiGateway.getLastSignedUser()
-    }
-    
-    func canEncryptCredentials(credential: CredentialDTO) -> Bool {
-        return apiGateway.canEncryptCredentials(credential: credential)
-    }
-    
-    func canRetrieveEncryptedCrendentials(id: String) -> CredentialDTO? {
-        return apiGateway.canRetrieveEncryptedCrendentials(id: id)
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 protocol SurveyListView {
     func showFailure(message: String)
@@ -19,6 +20,10 @@ protocol SurveyListPresenter {
     func fetchSurveys()
     func presentMenu()
     func presentSurveyDetail()
+    func getSurveyView(_ survey: SurveyDTO?,
+                       index: Int,
+                       delegate: surveySelectionDelegate) -> SurveyViewController?
+    func getSurveyPageViewController() -> SurveyPageViewController?
 }
 
 class SurveyListPresenterImplementation: SurveyListPresenter {
@@ -41,7 +46,9 @@ class SurveyListPresenterImplementation: SurveyListPresenter {
             do {
                 let response = try await useCase.fetchSurveys(parameters: parameters)
                 router.dismissLoaderView()
-                view.updateData(with: response.data)
+                DispatchQueue.main.async {
+                    self.view.updateData(with: response.data)
+                }
             } catch {
                 router.dismissLoaderView()
                 view.showFailure(message: error.localizedDescription)
@@ -55,5 +62,15 @@ class SurveyListPresenterImplementation: SurveyListPresenter {
     
     func presentSurveyDetail() {
         router.showSurveyDetail()
+    }
+    
+    func getSurveyView(_ survey: SurveyDTO?,
+                       index: Int,
+                       delegate: surveySelectionDelegate) -> SurveyViewController? {
+        return router.getSurveyView(survey, index: index, delegate: delegate)
+    }
+    
+    func getSurveyPageViewController() -> SurveyPageViewController? {
+        return router.getSurveyPageViewController()
     }
 }

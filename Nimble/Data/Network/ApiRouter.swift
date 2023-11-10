@@ -23,7 +23,7 @@ enum ApiRouter {
         case .signIn:
             return "//oauth/token"
         case .fetchSurveys(let parameters):
-            let formattedPath = String(format: "surveys?page[number]=%d&page[size]=%d",
+            let formattedPath = String(format: "/surveys?page[number]=%d&page[size]=%d",
                                        parameters.pageNumber,
                                        parameters.pageSize)
             return formattedPath
@@ -32,6 +32,15 @@ enum ApiRouter {
     
     var stringUrl: String {
         return host + path
+    }
+    
+    var token: String? {
+        switch self {
+        case .fetchSurveys:
+            return TokenManager.shared.canRetrieveEncryptedCrendentials(id: TokenManager.shared.identifier)?.token
+        default:
+            return nil
+        }
     }
     
     var method: String {

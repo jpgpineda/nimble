@@ -14,13 +14,19 @@ struct SurveyListResponse: Codable {
 
 // MARK: - Survey
 struct Survey: Codable {
-    let id, type: String
+    let id: String
+    let type: TypeEnum
     let attributes: Attributes
+}
+
+enum TypeEnum: String, Codable {
+    case surveySimple = "survey_simple"
 }
 
 // MARK: - Attributes
 struct Attributes: Codable {
-    let title, description, thankEmailAboveThreshold, thankEmailBelowThreshold: String
+    let title, description: String
+    let thankEmailAboveThreshold, thankEmailBelowThreshold: String?
     let isActive: Bool
     let coverImageURL: String
     let createdAt, activeAt: String
