@@ -39,6 +39,8 @@ class LoginRouterImplementation: LoginRouter {
     
     func presentHome() {
         guard let viewController = ModuleManager.surveyDependency.makeSurveyListViewController() else { return }
-        controller.presentNewFlow(rootView: viewController)
+        controller.presentNewFlow(rootView: viewController) {
+            self.dismissLoaderView()
+        }
     }
 }

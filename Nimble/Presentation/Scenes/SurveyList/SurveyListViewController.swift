@@ -26,6 +26,7 @@ class SurveyListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(self)
+        presenter.fetchUserInfo()
         presenter.fetchSurveys()
         setupView()
     }
@@ -33,6 +34,7 @@ class SurveyListViewController: UIViewController {
     private func setupView() {
         navigationController?.setNavigationBarHidden(true, animated: true)
         todayDateLabel.text = CVDateFormatter.shortDate(Date())
+        profileButton.roundCorners(.allCorners, radius: profileButton.frame.size.width / .two)
     }
     
     private func setupPageViewController() {
@@ -73,6 +75,11 @@ class SurveyListViewController: UIViewController {
 }
 
 extension SurveyListViewController: SurveyListView {
+    func updateUserInfo(user: UserDTO) {
+        guard let url = URL(string: user.avatarUrl) else { return }
+        profileButton.loadImageFromUrl(url: url)
+    }
+    
     func showFailure(message: String) {
         showErrorAlert(message: message)
     }

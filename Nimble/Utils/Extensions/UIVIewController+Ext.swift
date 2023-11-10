@@ -95,11 +95,13 @@ extension UIViewController {
         }
     }
     
-    func presentNewFlow(rootView: UIViewController) {
+    func presentNewFlow(rootView: UIViewController, completion: (() -> Void)? = nil) {
         DispatchQueue.main.async {
             let navigationController = UINavigationController(rootViewController: rootView)
             navigationController.setupPresentation()
-            self.present(navigationController, animated: true)
+            self.present(navigationController, animated: true) {
+                completion?()
+            }
         }
     }
 }

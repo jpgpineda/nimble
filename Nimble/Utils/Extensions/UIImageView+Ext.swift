@@ -11,7 +11,7 @@ extension UIImageView {
     func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFill) {
         contentMode = mode
         DispatchQueue.global().async {
-            let data = try? Data(contentsOf: url) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            let data = try? Data(contentsOf: url) 
             guard let data = data,
                   let displayImage = UIImage(data: data) else { return }
             DispatchQueue.main.async {

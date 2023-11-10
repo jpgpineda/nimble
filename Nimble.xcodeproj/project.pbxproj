@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08199EEB2AFDEB7E00BC202C /* UserApiGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199EEA2AFDEB7E00BC202C /* UserApiGateway.swift */; };
+		08199EED2AFDEBC300BC202C /* UserProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199EEC2AFDEBC300BC202C /* UserProfileResponse.swift */; };
+		08199EEF2AFDECFC00BC202C /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199EEE2AFDECFC00BC202C /* UserDTO.swift */; };
+		08199EF12AFDEE0200BC202C /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199EF02AFDEE0200BC202C /* UserUseCase.swift */; };
 		08ABF0AA2AFB1F6600DBD7D2 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0A92AFB1F6600DBD7D2 /* SignInRequest.swift */; };
 		08ABF0AC2AFB202F00DBD7D2 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0AB2AFB202F00DBD7D2 /* SignInResponse.swift */; };
 		08ABF0AF2AFB22A300DBD7D2 /* SignInResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0AE2AFB22A300DBD7D2 /* SignInResponseDTO.swift */; };
@@ -103,6 +107,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08199EEA2AFDEB7E00BC202C /* UserApiGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiGateway.swift; sourceTree = "<group>"; };
+		08199EEC2AFDEBC300BC202C /* UserProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileResponse.swift; sourceTree = "<group>"; };
+		08199EEE2AFDECFC00BC202C /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		08199EF02AFDEE0200BC202C /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
 		08ABF0A92AFB1F6600DBD7D2 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		08ABF0AB2AFB202F00DBD7D2 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		08ABF0AE2AFB22A300DBD7D2 /* SignInResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponseDTO.swift; sourceTree = "<group>"; };
@@ -216,6 +224,7 @@
 				08ABF0AE2AFB22A300DBD7D2 /* SignInResponseDTO.swift */,
 				08ABF0B02AFB284700DBD7D2 /* CredentialDTO.swift */,
 				08ABF0CC2AFCC7A000DBD7D2 /* SurveyListDTO.swift */,
+				08199EEE2AFDECFC00BC202C /* UserDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -517,6 +526,7 @@
 			children = (
 				08EB73F52AFA1E3F00E3FB05 /* AccessAPIGateway.swift */,
 				08ABF0C62AFCC47B00DBD7D2 /* SurveyApiGateway.swift */,
+				08199EEA2AFDEB7E00BC202C /* UserApiGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -527,6 +537,7 @@
 				08EB73F82AFA219000E3FB05 /* NoResponse.swift */,
 				08ABF0AB2AFB202F00DBD7D2 /* SignInResponse.swift */,
 				08ABF0C82AFCC53700DBD7D2 /* SurveyListResponse.swift */,
+				08199EEC2AFDEBC300BC202C /* UserProfileResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -536,6 +547,7 @@
 			children = (
 				08EB73FB2AFA225000E3FB05 /* AccessUseCase.swift */,
 				08ABF0CE2AFCC8C900DBD7D2 /* SurveyUseCase.swift */,
+				08199EF02AFDEE0200BC202C /* UserUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -715,6 +727,7 @@
 				08EB73B22AF6C98000E3FB05 /* WelcomeViewController.swift in Sources */,
 				08ABF0BA2AFB671900DBD7D2 /* SurveyListPresenter.swift in Sources */,
 				08EB73E32AF9F4DB00E3FB05 /* SignUpViewController.swift in Sources */,
+				08199EED2AFDEBC300BC202C /* UserProfileResponse.swift in Sources */,
 				08EB73E82AF9FE6500E3FB05 /* ApiRouter.swift in Sources */,
 				08EB73722AF6C5FB00E3FB05 /* AppDelegate.swift in Sources */,
 				08ABF0C52AFCAD1100DBD7D2 /* CVDateFormatter.swift in Sources */,
@@ -743,15 +756,18 @@
 				08ABF0BC2AFB671900DBD7D2 /* SurveyListViewController.swift in Sources */,
 				08EB73BF2AF801EB00E3FB05 /* String+Ext.swift in Sources */,
 				08EB74052AFA276900E3FB05 /* LoaderViewController.swift in Sources */,
+				08199EEF2AFDECFC00BC202C /* UserDTO.swift in Sources */,
 				08EB73F92AFA219000E3FB05 /* NoResponse.swift in Sources */,
 				08ABF0C72AFCC47B00DBD7D2 /* SurveyApiGateway.swift in Sources */,
 				08EB73E22AF9F4DB00E3FB05 /* SignUpRouter.swift in Sources */,
+				08199EF12AFDEE0200BC202C /* UserUseCase.swift in Sources */,
 				08EB73C12AF8020A00E3FB05 /* UIButton+Ext.swift in Sources */,
 				08EB73CC2AF8035D00E3FB05 /* LoginRouter.swift in Sources */,
 				08EB73E42AF9F4DB00E3FB05 /* SignUpConfigurator.swift in Sources */,
 				08ABF0CD2AFCC7A000DBD7D2 /* SurveyListDTO.swift in Sources */,
 				08EB73E12AF9F4DB00E3FB05 /* SignUpPresenter.swift in Sources */,
 				08EB73CE2AF8035D00E3FB05 /* LoginConfigurator.swift in Sources */,
+				08199EEB2AFDEB7E00BC202C /* UserApiGateway.swift in Sources */,
 				08EB73F32AFA01A500E3FB05 /* APIRequest.swift in Sources */,
 				08EB740F2AFB093600E3FB05 /* Constants.swift in Sources */,
 				08ABF0AC2AFB202F00DBD7D2 /* SignInResponse.swift in Sources */,

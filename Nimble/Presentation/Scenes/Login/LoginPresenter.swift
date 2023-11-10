@@ -52,7 +52,6 @@ class LoginPresenterImplementation: LoginPresenter {
                 useCase.saveLastSignedUser(email: email)
                 view.sheduleTokenExpiration(duration: response.expiresIn)
                 router.presentHome()
-                router.dismissLoaderView()
             } catch {
                 router.dismissLoaderView()
                 view.showFailure(message: error.localizedDescription)

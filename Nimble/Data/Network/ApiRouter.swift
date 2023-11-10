@@ -11,6 +11,7 @@ enum ApiRouter {
     case signUp(parameters: SignUpRequest)
     case signIn(parameters: SignInRequest)
     case fetchSurveys(parameters: FetchSurveysRequest)
+    case fetchUserProfile
     
     var host: String {
         return "https://survey-api.nimblehq.co/api/v1"
@@ -27,6 +28,8 @@ enum ApiRouter {
                                        parameters.pageNumber,
                                        parameters.pageSize)
             return formattedPath
+        case .fetchUserProfile:
+            return "/me"
         }
     }
     
@@ -36,7 +39,7 @@ enum ApiRouter {
     
     var token: String? {
         switch self {
-        case .fetchSurveys:
+        case .fetchSurveys, .fetchUserProfile:
             return TokenManager.shared.canRetrieveEncryptedCrendentials(id: TokenManager.shared.identifier)?.token
         default:
             return nil
@@ -45,11 +48,9 @@ enum ApiRouter {
     
     var method: String {
         switch self {
-        case .signUp:
+        case .signUp, .signIn:
             return HttpMethod.POST
-        case .signIn:
-            return HttpMethod.POST
-        case .fetchSurveys:
+        case .fetchSurveys, .fetchUserProfile:
             return HttpMethod.GET
         }
     }
@@ -67,7 +68,7 @@ enum ApiRouter {
             return try? JSONEncoder().encode(parameters)
         case .signIn(let parameters):
             return try? JSONEncoder().encode(parameters)
-        case .fetchSurveys:
+        default:
             return nil
         }
     }
