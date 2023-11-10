@@ -14,16 +14,19 @@ class SurveyListConfiguratorImplementation: SurveyListConfigurator {
         // Apigateway
         let apiGateway = SurveyApiGatewayImplementation()
         let userApiGateway = UserApiGatewayImplementation()
+        let accessApiGateway = AccessAPIGatewayImplementation()
         // UseCase
         let useCase = SurveyUseCaseImplementation(apiGateway: apiGateway)
         let userUseCase = UserUseCaseImplementation(apiGateway: userApiGateway)
+        let accessUseCase = AccessUseCaseImplementation(apiGateway: accessApiGateway)
         // Router
         let router = SurveyListRouterImplementation(controller: controller)
         // Presenter
         let presenter = SurveyListPresenterImplementation(view: controller,
                                                           router: router,
                                                           useCase: useCase,
-                                                          userUseCase: userUseCase)
+                                                          userUseCase: userUseCase,
+                                                          accessUseCase: accessUseCase)
         // View
         controller.presenter = presenter
     }

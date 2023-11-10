@@ -99,7 +99,7 @@ extension SurveyListViewController: SurveySelectionDelegate {
 
 extension SurveyListViewController: SignOutDelegate {
     func signOut() {
-        
+        presenter.requestSignOut()
     }
 }
 

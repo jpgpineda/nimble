@@ -11,6 +11,7 @@ protocol AccessUseCase {
     var apiGateway: AccessAPIGateway { get set }
     func requestSignUp(parameters: SignUpRequest) async throws -> NoResponse
     func requestSignIn(parameters: SignInRequest) async throws -> SignInResponseDTO
+    func requestSignOut(parameters: SignOutRequest) async throws -> NoResponse
     func saveLastSignedUser(email: String)
     func getLastSignedUser() -> String
 }
@@ -29,6 +30,10 @@ class AccessUseCaseImplementation: AccessUseCase {
     func requestSignIn(parameters: SignInRequest) async throws -> SignInResponseDTO {
         let response = try await apiGateway.requestSignIn(parameters: parameters)
         return SignInResponseDTO(with: response)
+    }
+    
+    func requestSignOut(parameters: SignOutRequest) async throws -> NoResponse {
+        return try await apiGateway.requestSignOut(parameters: parameters)
     }
     
     func saveLastSignedUser(email: String) {

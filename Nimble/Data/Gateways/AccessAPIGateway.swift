@@ -10,6 +10,7 @@ import Foundation
 protocol AccessAPIGateway {
     func requestSignUp(parameters: SignUpRequest) async throws -> NoResponse
     func requestSignIn(parameters: SignInRequest) async throws -> SignInResponse
+    func requestSignOut(parameters: SignOutRequest) async throws -> NoResponse
     func saveLastSignedUser(email: String)
     func getLastSignedUser() -> String
 }
@@ -22,6 +23,11 @@ class AccessAPIGatewayImplementation: AccessAPIGateway {
     
     func requestSignIn(parameters: SignInRequest) async throws -> SignInResponse {
         let response: SignInResponse = try await ApiRequestDispatcher.request(apiRouter: .signIn(parameters: parameters))
+        return response
+    }
+    
+    func requestSignOut(parameters: SignOutRequest) async throws -> NoResponse {
+        let response: NoResponse = try await ApiRequestDispatcher.request(apiRouter: .signOut(parameters: parameters))
         return response
     }
     

@@ -50,8 +50,11 @@ class LoginPresenterImplementation: LoginPresenter {
                 guard TokenManager.shared.canEncryptCredentials(credential: CredentialDTO(id: response.id, token: response.accessToken)) else { return }
                 TokenManager.shared.identifier = response.id
                 useCase.saveLastSignedUser(email: email)
-                view.sheduleTokenExpiration(duration: response.expiresIn)
-                router.presentHome()
+                password = .empty
+                DispatchQueue.main.async {
+                    self.view.sheduleTokenExpiration(duration: response.expiresIn)
+                    self.router.presentHome()
+                }
             } catch {
                 router.dismissLoaderView()
                 view.showFailure(message: error.localizedDescription)
