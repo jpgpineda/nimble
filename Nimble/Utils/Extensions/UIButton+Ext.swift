@@ -16,4 +16,15 @@ extension UIButton {
             return title(for: .normal) ?? .empty
         }
     }
+    
+    func loadImageFromUrl(url: URL) {
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url)
+            guard let data = data,
+                  let displayImage = UIImage(data: data) else { return }
+            DispatchQueue.main.async {
+                self.setImage(displayImage, for: .normal)
+            }
+        }
+    }
 }
