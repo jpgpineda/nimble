@@ -15,10 +15,10 @@ class NimbleDashedButton: UIButton {
     }
     
     private func setUp() {
-        dashedLine.strokeColor = UIColor.label.cgColor
+        dashedLine.strokeColor = UIColor.white.cgColor
         dashedLine.lineWidth = .two
-        titleLabel?.font = .systemFont(ofSize: .ten, weight: .semibold)
-        setTitleColor(.label, for: .normal)
+        titleLabel?.font = .systemFont(ofSize: .fifthteen, weight: .semibold)
+        setTitleColor(.white, for: .normal)
         layer.addSublayer(dashedLine)
     }
     

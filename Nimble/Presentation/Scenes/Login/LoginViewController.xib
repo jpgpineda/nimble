@@ -12,9 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewControllerViewController">
             <connections>
                 <outlet property="containerView" destination="VIT-73-fSP" id="qL2-Pj-HL7"/>
-                <outlet property="emailTextField" destination="YLR-tJ-HJj" id="meC-Nx-SeT"/>
+                <outlet property="emailTextField" destination="YLR-tJ-HJj" id="8Fp-Gf-nbP"/>
                 <outlet property="loginButton" destination="Qlw-AW-hDK" id="tki-b6-lbx"/>
-                <outlet property="passwordTextField" destination="FZW-wE-QTg" id="Z2z-9F-ImN"/>
+                <outlet property="passwordTextField" destination="FZW-wE-QTg" id="u5P-jq-oGv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,10 +38,10 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="localized" value="nimble"/>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLR-tJ-HJj">
-                            <rect key="frame" x="24" y="230.66666666666666" width="345" height="39.999999999999972"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLR-tJ-HJj" customClass="NimbleTextField" customModule="Nimble" customModuleProvider="target">
+                            <rect key="frame" x="24" y="230.66666666666666" width="345" height="49.999999999999972"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="zWF-uJ-av7"/>
+                                <constraint firstAttribute="height" constant="50" id="zWF-uJ-av7"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
@@ -49,21 +49,22 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="email"/>
                             </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FZW-wE-QTg">
-                            <rect key="frame" x="24" y="286.66666666666669" width="345" height="40"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FZW-wE-QTg" customClass="NimbleTextField" customModule="Nimble" customModuleProvider="target">
+                            <rect key="frame" x="24" y="296.66666666666669" width="345" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="pSz-87-pVP"/>
+                                <constraint firstAttribute="height" constant="50" id="pSz-87-pVP"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="password"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlw-AW-hDK" customClass="NimbleButton" customModule="Nimble" customModuleProvider="target">
-                            <rect key="frame" x="24" y="342.66666666666669" width="345" height="40"/>
+                            <rect key="frame" x="24" y="362.66666666666669" width="345" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="Kgk-5z-7ew"/>
+                                <constraint firstAttribute="height" constant="50" id="Kgk-5z-7ew"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Button"/>
@@ -75,7 +76,7 @@
                                 <action selector="requestLogin:" destination="-1" eventType="touchUpInside" id="y7t-hI-BbF"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgG-eR-LQA">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgG-eR-LQA" customClass="NimbleDashedButton" customModule="Nimble" customModuleProvider="target">
                             <rect key="frame" x="169.66666666666666" y="754" width="54" height="34"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Button"/>
@@ -103,7 +104,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="0.94722682119205293" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="FZW-wE-QTg" firstAttribute="leading" secondItem="VIT-73-fSP" secondAttribute="leading" constant="24" id="3VL-Gn-WNp"/>
                         <constraint firstItem="aKg-y8-Axt" firstAttribute="centerX" secondItem="VIT-73-fSP" secondAttribute="centerX" id="9YU-4a-n5f"/>

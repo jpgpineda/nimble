@@ -12,9 +12,10 @@ class LoginViewController: UIViewController {
     // MARK: Outlets
     //////////////////////////////////////
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailTextField: NimbleTextField!
+    @IBOutlet weak var passwordTextField: NimbleTextField!
     @IBOutlet weak var loginButton: NimbleButton!
-    @IBOutlet weak var passwordTextField: UITextField!
+
     //////////////////////////////////////
     // MARK: Properties
     //////////////////////////////////////
@@ -54,6 +55,8 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginView {
     func sheduleTokenExpiration(duration: Int64) {
+        passwordTextField.clearData()
+        loginButton.isActive = false
         manageTokenExpiration(time: duration) {
             print("Call to sign out API")
         } renewSessionAction: {

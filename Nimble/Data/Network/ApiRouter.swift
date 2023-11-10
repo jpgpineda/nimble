@@ -12,6 +12,7 @@ enum ApiRouter {
     case signIn(parameters: SignInRequest)
     case fetchSurveys(parameters: FetchSurveysRequest)
     case fetchUserProfile
+    case signOut(parameters: SignOutRequest)
     
     var host: String {
         return "https://survey-api.nimblehq.co/api/v1"
@@ -22,7 +23,7 @@ enum ApiRouter {
         case .signUp:
             return "/registrations"
         case .signIn:
-            return "//oauth/token"
+            return "/oauth/token"
         case .fetchSurveys(let parameters):
             let formattedPath = String(format: "/surveys?page[number]=%d&page[size]=%d",
                                        parameters.pageNumber,
@@ -30,12 +31,14 @@ enum ApiRouter {
             return formattedPath
         case .fetchUserProfile:
             return "/me"
+        case .signOut:
+            return "/oauth/revoke"
         }
     }
     
     var stringUrl: String {
         switch self {
-        case .signUp:
+        case .signUp, .signOut:
             return host + path
         case .signIn:
             return ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil ? "https://run.mocky.io/v3/2392d983-1258-4055-8747-39f0409537af" : host + path
@@ -59,18 +62,11 @@ enum ApiRouter {
     var method: String {
         guard ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil else { return HttpMethod.GET }
         switch self {
-        case .signUp, .signIn:
+        case .signUp, .signIn, .signOut:
             return HttpMethod.POST
         case .fetchSurveys, .fetchUserProfile:
             return HttpMethod.GET
         }
-    }
-    
-    var url: URLComponents {
-        var components = URLComponents()
-        components.host = host
-        components.path = path
-        return components
     }
     
     var body: Data? {
@@ -79,6 +75,8 @@ enum ApiRouter {
         case .signUp(let parameters):
             return try? JSONEncoder().encode(parameters)
         case .signIn(let parameters):
+            return try? JSONEncoder().encode(parameters)
+        case .signOut(let parameters):
             return try? JSONEncoder().encode(parameters)
         default:
             return nil

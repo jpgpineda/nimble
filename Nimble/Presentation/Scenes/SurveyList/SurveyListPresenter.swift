@@ -19,6 +19,7 @@ protocol SurveyListPresenter {
     var router: SurveyListRouter { get set }
     var useCase: SurveyUseCase { get set }
     var userUseCase: UserUseCase { get set }
+    var accessUseCase: AccessUseCase { get set }
     func fetchSurveys()
     func showMenu(delegate: SignOutDelegate)
     func presentSurveyDetail(survey: SurveyDTO)
@@ -27,6 +28,7 @@ protocol SurveyListPresenter {
                        delegate: SurveySelectionDelegate) -> SurveyViewController?
     func getSurveyPageViewController() -> SurveyPageViewController?
     func fetchUserInfo()
+    func requestSignOut()
 }
 
 class SurveyListPresenterImplementation: SurveyListPresenter {
@@ -34,16 +36,19 @@ class SurveyListPresenterImplementation: SurveyListPresenter {
     internal var router: SurveyListRouter
     internal var useCase: SurveyUseCase
     internal var userUseCase: UserUseCase
+    internal var accessUseCase: AccessUseCase
     var user: UserDTO = UserDTO()
     
     init(view: SurveyListView,
          router: SurveyListRouter,
          useCase: SurveyUseCase,
-         userUseCase: UserUseCase) {
+         userUseCase: UserUseCase,
+         accessUseCase: AccessUseCase) {
         self.view = view
         self.router = router
         self.useCase = useCase
         self.userUseCase = userUseCase
+        self.accessUseCase = accessUseCase
     }
     
     func fetchSurveys() {
@@ -91,6 +96,22 @@ class SurveyListPresenterImplementation: SurveyListPresenter {
                 DispatchQueue.main.async {
                     self.view.updateUserInfo(user: response)
 
+                }
+            } catch {
+                router.dismissLoaderView()
+                view.showFailure(message: error.localizedDescription)
+            }
+        }
+    }
+    
+    func requestSignOut() {
+        let parameters = SignOutRequest(token: TokenManager.shared.canRetrieveEncryptedCrendentials(id: TokenManager.shared.identifier)?.token ?? .empty)
+        router.showLoaderView()
+        Task.init {
+            do {
+                try await accessUseCase.requestSignOut(parameters: parameters)
+                DispatchQueue.main.async {
+                    self.router.dismissView()
                 }
             } catch {
                 router.dismissLoaderView()

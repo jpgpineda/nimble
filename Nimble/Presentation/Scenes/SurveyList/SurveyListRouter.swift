@@ -14,6 +14,7 @@ protocol SurveyListRouter {
                        index: Int,
                        delegate: SurveySelectionDelegate) -> SurveyViewController?
     func getSurveyPageViewController() -> SurveyPageViewController?
+    func dismissView()
 }
 
 class SurveyListRouterImplementation: SurveyListRouter {
@@ -53,5 +54,11 @@ class SurveyListRouterImplementation: SurveyListRouter {
     
     func getSurveyPageViewController() -> SurveyPageViewController? {
         return ModuleManager.surveyDependency.makeSurveyPageViewController()
+    }
+    
+    func dismissView() {
+        controller.navigationController?.dismiss(animated: true, completion: {
+            self.dismissLoaderView()
+        })
     }
 }
