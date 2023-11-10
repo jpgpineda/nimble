@@ -37,3 +37,9 @@
 
 // MARK: Survey list
 "today"             = "Today";
+
+// MARK: Survey detail
+"startSurvey"       = "Start Survey";
+
+// MARK: Menu
+"logout"            = "Logout";

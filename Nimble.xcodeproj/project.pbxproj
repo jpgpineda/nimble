@@ -17,6 +17,14 @@
 		08199EFD2AFE017B00BC202C /* SurveyDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199EF82AFE017B00BC202C /* SurveyDetailConfigurator.swift */; };
 		08199EFE2AFE017B00BC202C /* SurveyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08199EF92AFE017B00BC202C /* SurveyDetailViewController.xib */; };
 		08199F012AFEBEB200BC202C /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199F002AFEBEB200BC202C /* Images.swift */; };
+		08199F092AFED03F00BC202C /* DrawerMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199F042AFED03F00BC202C /* DrawerMenuPresenter.swift */; };
+		08199F0A2AFED03F00BC202C /* DrawerMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199F052AFED03F00BC202C /* DrawerMenuRouter.swift */; };
+		08199F0B2AFED03F00BC202C /* DrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199F062AFED03F00BC202C /* DrawerMenuViewController.swift */; };
+		08199F0C2AFED03F00BC202C /* DrawerMenuConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199F072AFED03F00BC202C /* DrawerMenuConfigurator.swift */; };
+		08199F0D2AFED03F00BC202C /* DrawerMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08199F082AFED03F00BC202C /* DrawerMenuViewController.xib */; };
+		08199F122AFED2EA00BC202C /* DrawerSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199F0F2AFED2EA00BC202C /* DrawerSlideAnimation.swift */; };
+		08199F132AFED2EA00BC202C /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199F102AFED2EA00BC202C /* DrawerTransitionManager.swift */; };
+		08199F142AFED2EA00BC202C /* DrawerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199F112AFED2EA00BC202C /* DrawerPresentationController.swift */; };
 		08ABF0AA2AFB1F6600DBD7D2 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0A92AFB1F6600DBD7D2 /* SignInRequest.swift */; };
 		08ABF0AC2AFB202F00DBD7D2 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0AB2AFB202F00DBD7D2 /* SignInResponse.swift */; };
 		08ABF0AF2AFB22A300DBD7D2 /* SignInResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0AE2AFB22A300DBD7D2 /* SignInResponseDTO.swift */; };
@@ -124,6 +132,14 @@
 		08199EF92AFE017B00BC202C /* SurveyDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyDetailViewController.xib; sourceTree = "<group>"; };
 		08199F002AFEBEB200BC202C /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		08199F022AFEC48500BC202C /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+		08199F042AFED03F00BC202C /* DrawerMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuPresenter.swift; sourceTree = "<group>"; };
+		08199F052AFED03F00BC202C /* DrawerMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuRouter.swift; sourceTree = "<group>"; };
+		08199F062AFED03F00BC202C /* DrawerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuViewController.swift; sourceTree = "<group>"; };
+		08199F072AFED03F00BC202C /* DrawerMenuConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuConfigurator.swift; sourceTree = "<group>"; };
+		08199F082AFED03F00BC202C /* DrawerMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawerMenuViewController.xib; sourceTree = "<group>"; };
+		08199F0F2AFED2EA00BC202C /* DrawerSlideAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerSlideAnimation.swift; sourceTree = "<group>"; };
+		08199F102AFED2EA00BC202C /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
+		08199F112AFED2EA00BC202C /* DrawerPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerPresentationController.swift; sourceTree = "<group>"; };
 		08ABF0A92AFB1F6600DBD7D2 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		08ABF0AB2AFB202F00DBD7D2 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		08ABF0AE2AFB22A300DBD7D2 /* SignInResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponseDTO.swift; sourceTree = "<group>"; };
@@ -249,6 +265,29 @@
 				08199F002AFEBEB200BC202C /* Images.swift */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		08199F032AFED02100BC202C /* DrawerMenu */ = {
+			isa = PBXGroup;
+			children = (
+				08199F0E2AFED2DB00BC202C /* Manager */,
+				08199F072AFED03F00BC202C /* DrawerMenuConfigurator.swift */,
+				08199F042AFED03F00BC202C /* DrawerMenuPresenter.swift */,
+				08199F052AFED03F00BC202C /* DrawerMenuRouter.swift */,
+				08199F062AFED03F00BC202C /* DrawerMenuViewController.swift */,
+				08199F082AFED03F00BC202C /* DrawerMenuViewController.xib */,
+			);
+			path = DrawerMenu;
+			sourceTree = "<group>";
+		};
+		08199F0E2AFED2DB00BC202C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				08199F112AFED2EA00BC202C /* DrawerPresentationController.swift */,
+				08199F0F2AFED2EA00BC202C /* DrawerSlideAnimation.swift */,
+				08199F102AFED2EA00BC202C /* DrawerTransitionManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		08ABF0AD2AFB229700DBD7D2 /* DTOs */ = {
@@ -425,6 +464,7 @@
 		08EB73A72AF6C63D00E3FB05 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				08199F032AFED02100BC202C /* DrawerMenu */,
 				08199EF42AFE014D00BC202C /* SurveyDetail */,
 				08ABF0D22AFDBDC300DBD7D2 /* Survey */,
 				08ABF0B42AFB66F800DBD7D2 /* SurveyList */,
@@ -713,6 +753,7 @@
 			files = (
 				08ABF0E42AFDC34A00DBD7D2 /* SurveyPageViewController.xib in Resources */,
 				08EB73CF2AF8035D00E3FB05 /* LoginViewController.xib in Resources */,
+				08199F0D2AFED03F00BC202C /* DrawerMenuViewController.xib in Resources */,
 				08EB737E2AF6C5FB00E3FB05 /* LaunchScreen.storyboard in Resources */,
 				08EB740B2AFA289300E3FB05 /* loader.json in Resources */,
 				08EB73AC2AF6C72000E3FB05 /* Localizable.strings in Resources */,
@@ -747,6 +788,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08199F0B2AFED03F00BC202C /* DrawerMenuViewController.swift in Sources */,
 				08ABF0C92AFCC53700DBD7D2 /* SurveyListResponse.swift in Sources */,
 				08EB73BB2AF6D4E200E3FB05 /* NimbleTextField.swift in Sources */,
 				08EB73EA2AF9FF6A00E3FB05 /* Http.swift in Sources */,
@@ -767,8 +809,11 @@
 				08ABF0BA2AFB671900DBD7D2 /* SurveyListPresenter.swift in Sources */,
 				08EB73E32AF9F4DB00E3FB05 /* SignUpViewController.swift in Sources */,
 				08199EFC2AFE017B00BC202C /* SurveyDetailViewController.swift in Sources */,
+				08199F132AFED2EA00BC202C /* DrawerTransitionManager.swift in Sources */,
+				08199F142AFED2EA00BC202C /* DrawerPresentationController.swift in Sources */,
 				08199EED2AFDEBC300BC202C /* UserProfileResponse.swift in Sources */,
 				08EB73E82AF9FE6500E3FB05 /* ApiRouter.swift in Sources */,
+				08199F0A2AFED03F00BC202C /* DrawerMenuRouter.swift in Sources */,
 				08EB73722AF6C5FB00E3FB05 /* AppDelegate.swift in Sources */,
 				08ABF0C52AFCAD1100DBD7D2 /* CVDateFormatter.swift in Sources */,
 				08EB73D12AF805D800E3FB05 /* NimbleDashedButton.swift in Sources */,
@@ -781,9 +826,11 @@
 				08EB73EC2AF9FFFA00E3FB05 /* ApiRequestDispatcher.swift in Sources */,
 				08EB73B72AF6D42600E3FB05 /* UIVIew+Ext.swift in Sources */,
 				08EB73C32AF8022B00E3FB05 /* UITextfield+Ext.swift in Sources */,
+				08199F0C2AFED03F00BC202C /* DrawerMenuConfigurator.swift in Sources */,
 				08ABF0BD2AFB671900DBD7D2 /* SurveyListConfigurator.swift in Sources */,
 				08EB73F12AFA017E00E3FB05 /* SignUpRequest.swift in Sources */,
 				08EB73FC2AFA225000E3FB05 /* AccessUseCase.swift in Sources */,
+				08199F092AFED03F00BC202C /* DrawerMenuPresenter.swift in Sources */,
 				08199F012AFEBEB200BC202C /* Images.swift in Sources */,
 				08EB73CB2AF8035D00E3FB05 /* LoginPresenter.swift in Sources */,
 				08EB73D82AF8091400E3FB05 /* ModuleManager.swift in Sources */,
@@ -796,6 +843,7 @@
 				08ABF0EA2AFDD48300DBD7D2 /* UIImageView+Ext.swift in Sources */,
 				08ABF0E82AFDC73000DBD7D2 /* TokenManager.swift in Sources */,
 				08ABF0BC2AFB671900DBD7D2 /* SurveyListViewController.swift in Sources */,
+				08199F122AFED2EA00BC202C /* DrawerSlideAnimation.swift in Sources */,
 				08EB73BF2AF801EB00E3FB05 /* String+Ext.swift in Sources */,
 				08EB74052AFA276900E3FB05 /* LoaderViewController.swift in Sources */,
 				08199EEF2AFDECFC00BC202C /* UserDTO.swift in Sources */,

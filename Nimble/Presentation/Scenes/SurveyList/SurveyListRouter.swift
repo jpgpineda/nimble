@@ -8,7 +8,7 @@
 protocol SurveyListRouter {
     func showLoaderView()
     func dismissLoaderView()
-    func showMenu()
+    func showMenu(user: UserDTO, delegate: SignOutDelegate)
     func presentSurveyDetail(survey: SurveyDTO)
     func getSurveyView(_ survey: SurveyDTO?,
                        index: Int,
@@ -31,8 +31,11 @@ class SurveyListRouterImplementation: SurveyListRouter {
         controller.dismissLoader()
     }
     
-    func showMenu() {
-        
+    func showMenu(user: UserDTO, delegate: SignOutDelegate) {
+        guard let viewController = ModuleManager.toolsDependency.makeMenuViewController(user: user,
+                                                                                        delegate: delegate,
+                                                                                        drawerDelegate: DrawerTransitionManager()) else { return }
+        controller.present(viewController, animated: true)
     }
     
     func presentSurveyDetail(survey: SurveyDTO) {

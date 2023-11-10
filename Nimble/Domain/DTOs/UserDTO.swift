@@ -15,4 +15,9 @@ struct UserDTO {
         name = response.data.attributes.name
         avatarUrl = response.data.attributes.avatarURL
     }
+    
+    init() {
+        name = .empty
+        avatarUrl = .empty
+    }
 }

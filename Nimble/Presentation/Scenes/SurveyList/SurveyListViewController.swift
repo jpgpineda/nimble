@@ -70,7 +70,7 @@ class SurveyListViewController: UIViewController {
     }
     
     @IBAction func presentProfile(_ sender: UIButton) {
-        
+        presenter.showMenu(delegate: self)
     }
 }
 
@@ -94,6 +94,12 @@ extension SurveyListViewController: SurveyListView {
 extension SurveyListViewController: SurveySelectionDelegate {
     func goToSurveyDetail(survey: SurveyDTO) {
         presenter.presentSurveyDetail(survey: survey)
+    }
+}
+
+extension SurveyListViewController: SignOutDelegate {
+    func signOut() {
+        
     }
 }
 

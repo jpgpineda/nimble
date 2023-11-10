@@ -20,7 +20,7 @@ protocol SurveyListPresenter {
     var useCase: SurveyUseCase { get set }
     var userUseCase: UserUseCase { get set }
     func fetchSurveys()
-    func presentMenu()
+    func showMenu(delegate: SignOutDelegate)
     func presentSurveyDetail(survey: SurveyDTO)
     func getSurveyView(_ survey: SurveyDTO?,
                        index: Int,
@@ -34,6 +34,7 @@ class SurveyListPresenterImplementation: SurveyListPresenter {
     internal var router: SurveyListRouter
     internal var useCase: SurveyUseCase
     internal var userUseCase: UserUseCase
+    var user: UserDTO = UserDTO()
     
     init(view: SurveyListView,
          router: SurveyListRouter,
@@ -62,8 +63,8 @@ class SurveyListPresenterImplementation: SurveyListPresenter {
         }
     }
     
-    func presentMenu() {
-        router.showMenu()
+    func showMenu(delegate: SignOutDelegate) {
+        router.showMenu(user: user, delegate: delegate)
     }
     
     func presentSurveyDetail(survey: SurveyDTO) {
@@ -85,6 +86,7 @@ class SurveyListPresenterImplementation: SurveyListPresenter {
         Task.init {
             do {
                 let response = try await userUseCase.fetchUserProfile()
+                user = response
                 router.dismissLoaderView()
                 DispatchQueue.main.async {
                     self.view.updateUserInfo(user: response)
