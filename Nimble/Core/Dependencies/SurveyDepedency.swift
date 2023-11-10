@@ -13,8 +13,9 @@ protocol SurveyDepedency {
     func makeSurveyListViewController() -> SurveyListViewController?
     func makeSurveyViewController(survey: SurveyDTO?,
                                   index: Int,
-                                  delegate: surveySelectionDelegate) -> SurveyViewController?
+                                  delegate: SurveySelectionDelegate) -> SurveyViewController?
     func makeSurveyPageViewController() -> SurveyPageViewController?
+    func makeSurveyDetailViewController(survey: SurveyDTO) -> SurveyDetailViewController?
 }
 
 class SurveyDepedencyImplementation: SurveyDepedency {
@@ -25,6 +26,7 @@ class SurveyDepedencyImplementation: SurveyDepedency {
         registerSurveyListViewController()
         registerSurveyViewController()
         registerSurveyPageViewController()
+        registerSurveyDetailViewController()
     }
     
     private func registerSurveyListViewController() {
@@ -45,7 +47,7 @@ class SurveyDepedencyImplementation: SurveyDepedency {
     
     func makeSurveyViewController(survey: SurveyDTO?,
                                   index: Int,
-                                  delegate: surveySelectionDelegate) -> SurveyViewController? {
+                                  delegate: SurveySelectionDelegate) -> SurveyViewController? {
         guard let viewController = container.resolve(SurveyViewController.self) else { return nil }
         viewController.survey = survey
         viewController.index = index
@@ -61,5 +63,17 @@ class SurveyDepedencyImplementation: SurveyDepedency {
     
     func makeSurveyPageViewController() -> SurveyPageViewController? {
         return container.resolve(SurveyPageViewController.self)
+    }
+    
+    private func registerSurveyDetailViewController() {
+        container.register(SurveyDetailViewController.self) { _ in
+            return SurveyDetailViewController()
+        }
+    }
+    
+    func makeSurveyDetailViewController(survey: SurveyDTO) -> SurveyDetailViewController? {
+        guard let viewController = container.resolve(SurveyDetailViewController.self) else { return nil }
+        viewController.survey = survey
+        return viewController
     }
 }

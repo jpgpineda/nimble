@@ -11,6 +11,12 @@
 		08199EED2AFDEBC300BC202C /* UserProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199EEC2AFDEBC300BC202C /* UserProfileResponse.swift */; };
 		08199EEF2AFDECFC00BC202C /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199EEE2AFDECFC00BC202C /* UserDTO.swift */; };
 		08199EF12AFDEE0200BC202C /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199EF02AFDEE0200BC202C /* UserUseCase.swift */; };
+		08199EFA2AFE017B00BC202C /* SurveyDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199EF52AFE017B00BC202C /* SurveyDetailPresenter.swift */; };
+		08199EFB2AFE017B00BC202C /* SurveyDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199EF62AFE017B00BC202C /* SurveyDetailRouter.swift */; };
+		08199EFC2AFE017B00BC202C /* SurveyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199EF72AFE017B00BC202C /* SurveyDetailViewController.swift */; };
+		08199EFD2AFE017B00BC202C /* SurveyDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199EF82AFE017B00BC202C /* SurveyDetailConfigurator.swift */; };
+		08199EFE2AFE017B00BC202C /* SurveyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08199EF92AFE017B00BC202C /* SurveyDetailViewController.xib */; };
+		08199F012AFEBEB200BC202C /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08199F002AFEBEB200BC202C /* Images.swift */; };
 		08ABF0AA2AFB1F6600DBD7D2 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0A92AFB1F6600DBD7D2 /* SignInRequest.swift */; };
 		08ABF0AC2AFB202F00DBD7D2 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0AB2AFB202F00DBD7D2 /* SignInResponse.swift */; };
 		08ABF0AF2AFB22A300DBD7D2 /* SignInResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABF0AE2AFB22A300DBD7D2 /* SignInResponseDTO.swift */; };
@@ -111,6 +117,12 @@
 		08199EEC2AFDEBC300BC202C /* UserProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileResponse.swift; sourceTree = "<group>"; };
 		08199EEE2AFDECFC00BC202C /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		08199EF02AFDEE0200BC202C /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
+		08199EF52AFE017B00BC202C /* SurveyDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailPresenter.swift; sourceTree = "<group>"; };
+		08199EF62AFE017B00BC202C /* SurveyDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailRouter.swift; sourceTree = "<group>"; };
+		08199EF72AFE017B00BC202C /* SurveyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailViewController.swift; sourceTree = "<group>"; };
+		08199EF82AFE017B00BC202C /* SurveyDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailConfigurator.swift; sourceTree = "<group>"; };
+		08199EF92AFE017B00BC202C /* SurveyDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyDetailViewController.xib; sourceTree = "<group>"; };
+		08199F002AFEBEB200BC202C /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		08ABF0A92AFB1F6600DBD7D2 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		08ABF0AB2AFB202F00DBD7D2 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		08ABF0AE2AFB22A300DBD7D2 /* SignInResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponseDTO.swift; sourceTree = "<group>"; };
@@ -218,6 +230,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08199EF42AFE014D00BC202C /* SurveyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				08199EF82AFE017B00BC202C /* SurveyDetailConfigurator.swift */,
+				08199EF52AFE017B00BC202C /* SurveyDetailPresenter.swift */,
+				08199EF62AFE017B00BC202C /* SurveyDetailRouter.swift */,
+				08199EF72AFE017B00BC202C /* SurveyDetailViewController.swift */,
+				08199EF92AFE017B00BC202C /* SurveyDetailViewController.xib */,
+			);
+			path = SurveyDetail;
+			sourceTree = "<group>";
+		};
+		08199EFF2AFEBEA700BC202C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				08199F002AFEBEB200BC202C /* Images.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		08ABF0AD2AFB229700DBD7D2 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +423,7 @@
 		08EB73A72AF6C63D00E3FB05 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				08199EF42AFE014D00BC202C /* SurveyDetail */,
 				08ABF0D22AFDBDC300DBD7D2 /* Survey */,
 				08ABF0B42AFB66F800DBD7D2 /* SurveyList */,
 				08EB73DB2AF9F4CC00E3FB05 /* SignUp */,
@@ -403,6 +436,7 @@
 		08EB73A82AF6C6F500E3FB05 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				08199EFF2AFEBEA700BC202C /* Images */,
 				08EB737A2AF6C5FB00E3FB05 /* Assets.xcassets */,
 				08EB73AA2AF6C70500E3FB05 /* Animations */,
 				08EB73A92AF6C6FF00E3FB05 /* Strings */,
@@ -682,6 +716,7 @@
 				08EB73AC2AF6C72000E3FB05 /* Localizable.strings in Resources */,
 				08EB737B2AF6C5FB00E3FB05 /* Assets.xcassets in Resources */,
 				08EB73E52AF9F4DB00E3FB05 /* SignUpViewController.xib in Resources */,
+				08199EFE2AFE017B00BC202C /* SurveyDetailViewController.xib in Resources */,
 				08ABF0BE2AFB671900DBD7D2 /* SurveyListViewController.xib in Resources */,
 				08EB74062AFA276900E3FB05 /* LoaderViewController.xib in Resources */,
 				08ABF0DC2AFDBDD100DBD7D2 /* SurveyViewController.xib in Resources */,
@@ -722,11 +757,14 @@
 				08EB73BD2AF801C400E3FB05 /* UILabel+Ext.swift in Sources */,
 				08EB74012AFA26BD00E3FB05 /* UIVIewController+Ext.swift in Sources */,
 				08EB73B52AF6D3DC00E3FB05 /* NimbleButton.swift in Sources */,
+				08199EFD2AFE017B00BC202C /* SurveyDetailConfigurator.swift in Sources */,
 				08ABF0C22AFB68C500DBD7D2 /* UINavigationController+Ext.swift in Sources */,
 				08EB73CD2AF8035D00E3FB05 /* LoginViewController.swift in Sources */,
 				08EB73B22AF6C98000E3FB05 /* WelcomeViewController.swift in Sources */,
+				08199EFA2AFE017B00BC202C /* SurveyDetailPresenter.swift in Sources */,
 				08ABF0BA2AFB671900DBD7D2 /* SurveyListPresenter.swift in Sources */,
 				08EB73E32AF9F4DB00E3FB05 /* SignUpViewController.swift in Sources */,
+				08199EFC2AFE017B00BC202C /* SurveyDetailViewController.swift in Sources */,
 				08199EED2AFDEBC300BC202C /* UserProfileResponse.swift in Sources */,
 				08EB73E82AF9FE6500E3FB05 /* ApiRouter.swift in Sources */,
 				08EB73722AF6C5FB00E3FB05 /* AppDelegate.swift in Sources */,
@@ -744,11 +782,13 @@
 				08ABF0BD2AFB671900DBD7D2 /* SurveyListConfigurator.swift in Sources */,
 				08EB73F12AFA017E00E3FB05 /* SignUpRequest.swift in Sources */,
 				08EB73FC2AFA225000E3FB05 /* AccessUseCase.swift in Sources */,
+				08199F012AFEBEB200BC202C /* Images.swift in Sources */,
 				08EB73CB2AF8035D00E3FB05 /* LoginPresenter.swift in Sources */,
 				08EB73D82AF8091400E3FB05 /* ModuleManager.swift in Sources */,
 				08EB73EE2AFA005500E3FB05 /* APIRequestError.swift in Sources */,
 				08EB73B92AF6D47000E3FB05 /* CGFloat+Ext.swift in Sources */,
 				08EB73D62AF8087400E3FB05 /* AccessDependency.swift in Sources */,
+				08199EFB2AFE017B00BC202C /* SurveyDetailRouter.swift in Sources */,
 				08EB740D2AFA291900E3FB05 /* ToolsDependency.swift in Sources */,
 				08ABF0BB2AFB671900DBD7D2 /* SurveyListRouter.swift in Sources */,
 				08ABF0EA2AFDD48300DBD7D2 /* UIImageView+Ext.swift in Sources */,

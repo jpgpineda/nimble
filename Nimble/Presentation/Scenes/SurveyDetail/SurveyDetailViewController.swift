@@ -1,49 +1,53 @@
 //
-//  SurveyViewController.swift
+//  SurveyDetailViewController.swift
 //  Nimble
 //
-//  Created by javier pineda on 09/11/23.
+//  Created by javier pineda on 10/11/23.
 //
 
 import UIKit
 
-class SurveyViewController: UIViewController {
+class SurveyDetailViewController: UIViewController {
     //////////////////////////////////////
     // MARK: Outlets
     //////////////////////////////////////
     @IBOutlet weak var surveyTitleLabel: UILabel!
-    @IBOutlet weak var detailButton: UIButton!
-    @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var surveyDescriptionLabel: UILabel!
+    @IBOutlet weak var beginSurveyTitle: UIButton!
+    @IBOutlet weak var coverImageView: UIImageView!
+    
     //////////////////////////////////////
     // MARK: Properties
     //////////////////////////////////////
+    private let configurator =  SurveyDetailConfiguratorImplementation()
+    var presenter: SurveyDetailPresenter!
     var survey: SurveyDTO?
-    var index: Int?
-    weak var delegate: SurveySelectionDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurator.configure(self)
         setupView()
     }
     
     private func setupView() {
-        detailButton.roundCorners(.allCorners, radius: detailButton.frame.size.width / .two)
+        beginSurveyTitle.roundCorners(.allCorners, radius: .eight)
         guard let survey = survey else { return }
-        surveyTitleLabel.text = survey.attributes.title
         surveyDescriptionLabel.text = survey.attributes.description
+        surveyTitleLabel.text = survey.attributes.title
         guard let imageUrl = URL(string: survey.attributes.coverImageUrl) else {
             coverImageView.image = .hiking
             return }
         coverImageView.downloaded(from: imageUrl)
     }
     
-    @IBAction func goToSurveyDetatil(_ sender: UIButton) {
-        guard let survey = survey else { return }
-        delegate?.goToSurveyDetail(survey: survey)
+    @IBAction func dismissView(_ sender: UIButton) {
+        presenter.dismissView()
+    }
+
+    @IBAction func beginSurvey(_ sender: Any) {
     }
 }
 
-protocol SurveySelectionDelegate: AnyObject {
-    func goToSurveyDetail(survey: SurveyDTO)
+extension SurveyDetailViewController: SurveyDetailView {
+    
 }

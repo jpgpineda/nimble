@@ -91,9 +91,9 @@ extension SurveyListViewController: SurveyListView {
     }
 }
 
-extension SurveyListViewController: surveySelectionDelegate {
-    func goToSurveyDetail(surveyId: String) {
-        presenter.presentSurveyDetail()
+extension SurveyListViewController: SurveySelectionDelegate {
+    func goToSurveyDetail(survey: SurveyDTO) {
+        presenter.presentSurveyDetail(survey: survey)
     }
 }
 

@@ -9,10 +9,10 @@ protocol SurveyListRouter {
     func showLoaderView()
     func dismissLoaderView()
     func showMenu()
-    func showSurveyDetail()
+    func presentSurveyDetail(survey: SurveyDTO)
     func getSurveyView(_ survey: SurveyDTO?,
                        index: Int,
-                       delegate: surveySelectionDelegate) -> SurveyViewController?
+                       delegate: SurveySelectionDelegate) -> SurveyViewController?
     func getSurveyPageViewController() -> SurveyPageViewController?
 }
 
@@ -35,13 +35,14 @@ class SurveyListRouterImplementation: SurveyListRouter {
         
     }
     
-    func showSurveyDetail() {
-        
+    func presentSurveyDetail(survey: SurveyDTO) {
+        guard let viewController = ModuleManager.surveyDependency.makeSurveyDetailViewController(survey: survey) else { return }
+        controller.show(viewController, sender: nil)
     }
     
     func getSurveyView(_ survey: SurveyDTO?,
                        index: Int,
-                       delegate: surveySelectionDelegate) -> SurveyViewController? {
+                       delegate: SurveySelectionDelegate) -> SurveyViewController? {
         return ModuleManager.surveyDependency.makeSurveyViewController(survey: survey,
                                                                        index: index,
                                                                        delegate: delegate)
