@@ -47,7 +47,8 @@ class LoginPresenterImplementation: LoginPresenter {
         Task.init {
             do {
                 let response = try await useCase.requestSignIn(parameters: parameters)
-                guard useCase.canEncryptCredentials(credential: CredentialDTO(id: response.id, token: response.accessToken)) else { return }
+                guard TokenManager.shared.canEncryptCredentials(credential: CredentialDTO(id: response.id, token: response.accessToken)) else { return }
+                TokenManager.shared.identifier = response.id
                 useCase.saveLastSignedUser(email: email)
                 view.sheduleTokenExpiration(duration: response.expiresIn)
                 router.presentHome()

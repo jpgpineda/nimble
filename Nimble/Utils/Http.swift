@@ -19,3 +19,8 @@ struct HTTPCodes {
     
     static let validResponseCode = [created, accepted, ok]
 }
+
+struct HTTPHeaders {
+    static let contentType      = "Content-Type"
+    static let authorization    = "Authorization"
+}
