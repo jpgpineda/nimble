@@ -123,6 +123,7 @@
 		08199EF82AFE017B00BC202C /* SurveyDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailConfigurator.swift; sourceTree = "<group>"; };
 		08199EF92AFE017B00BC202C /* SurveyDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyDetailViewController.xib; sourceTree = "<group>"; };
 		08199F002AFEBEB200BC202C /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		08199F022AFEC48500BC202C /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		08ABF0A92AFB1F6600DBD7D2 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		08ABF0AB2AFB202F00DBD7D2 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		08ABF0AE2AFB22A300DBD7D2 /* SignInResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponseDTO.swift; sourceTree = "<group>"; };
@@ -359,6 +360,7 @@
 				08EB73A12AF6C61000E3FB05 /* Domain */,
 				08EB73A62AF6C62E00E3FB05 /* Presentation */,
 				08EB73AF2AF6C93E00E3FB05 /* Utils */,
+				08199F022AFEC48500BC202C /* TestPlan.xctestplan */,
 			);
 			path = Nimble;
 			sourceTree = "<group>";

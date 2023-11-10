@@ -10,27 +10,62 @@ import XCTest
 
 final class NimbleTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testLoginResponseTokenExists() async {
+        // Arrange
+        let apiGateway = AccessAPIGatewayImplementation()
+        let useCase = AccessUseCaseImplementation(apiGateway: apiGateway)
+        // Act
+        do {
+            let response: SignInResponseDTO = try await useCase.requestSignIn(parameters: SignInRequest())
+            // Assert
+            XCTAssertFalse(response.accessToken.isEmpty)
+        } catch {
+            // Assert
+            XCTFail(error.localizedDescription)
         }
     }
-
+    
+    func testSurveyListIsNotEmpty() async {
+        // Arrange
+        let apiGateway = SurveyApiGatewayImplementation()
+        let useCase = SurveyUseCaseImplementation(apiGateway: apiGateway)
+        // Act
+        do {
+            let response: SurveyListDTO = try await useCase.fetchSurveys(parameters: FetchSurveysRequest())
+            // Assert
+            XCTAssertFalse(response.data.isEmpty)
+        } catch {
+            // Assert
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func testInnactiveAtFromSurveyItemListIsNil() async {
+        // Arrange
+        let apiGateway = SurveyApiGatewayImplementation()
+        // Act
+        do {
+            let response: SurveyListResponse = try await apiGateway.fetchSurveys(parameters: FetchSurveysRequest())
+            // Assert
+            XCTAssertNil(response.data.first?.attributes.inactiveAt)
+        } catch {
+            // Assert
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func testProfileAvatarUrlIsNotEmpty() async {
+        // Arrange
+        let apiGateway = UserApiGatewayImplementation()
+        let useCase = UserUseCaseImplementation(apiGateway: apiGateway)
+        // Act
+        do {
+            let response: UserDTO = try await useCase.fetchUserProfile()
+            // Assert
+            XCTAssertFalse(response.avatarUrl.isEmpty)
+        } catch {
+            // Assert
+            XCTFail(error.localizedDescription)
+        }
+    }
 }
