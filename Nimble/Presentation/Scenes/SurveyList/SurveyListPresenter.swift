@@ -21,10 +21,10 @@ protocol SurveyListPresenter {
     var userUseCase: UserUseCase { get set }
     func fetchSurveys()
     func presentMenu()
-    func presentSurveyDetail()
+    func presentSurveyDetail(survey: SurveyDTO)
     func getSurveyView(_ survey: SurveyDTO?,
                        index: Int,
-                       delegate: surveySelectionDelegate) -> SurveyViewController?
+                       delegate: SurveySelectionDelegate) -> SurveyViewController?
     func getSurveyPageViewController() -> SurveyPageViewController?
     func fetchUserInfo()
 }
@@ -66,13 +66,13 @@ class SurveyListPresenterImplementation: SurveyListPresenter {
         router.showMenu()
     }
     
-    func presentSurveyDetail() {
-        router.showSurveyDetail()
+    func presentSurveyDetail(survey: SurveyDTO) {
+        router.presentSurveyDetail(survey: survey)
     }
     
     func getSurveyView(_ survey: SurveyDTO?,
                        index: Int,
-                       delegate: surveySelectionDelegate) -> SurveyViewController? {
+                       delegate: SurveySelectionDelegate) -> SurveyViewController? {
         return router.getSurveyView(survey, index: index, delegate: delegate)
     }
     
