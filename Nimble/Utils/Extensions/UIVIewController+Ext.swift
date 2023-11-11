@@ -63,7 +63,7 @@ extension UIViewController {
                                       preferredStyle: .actionSheet)
         
         if let cancel = cancel {
-            alert.addAction(UIAlertAction(title: confirm,
+            alert.addAction(UIAlertAction(title: cancel,
                                           style: .cancel,
                                           handler: { (action) in
                                             cancelAction()
